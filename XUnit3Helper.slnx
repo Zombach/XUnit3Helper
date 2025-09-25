@@ -1,0 +1,28 @@
+<Solution>
+  <Folder Name="/example-tests/">
+    <Project Path="example-tests/XUnit3Helper.Example.Api.IntegrationTests/XUnit3Helper.Example.Api.IntegrationTests.csproj" Id="b697a3b7-d866-4dca-81b7-3dc2be91e672" />
+    <Project Path="example-tests/XUnit3Helper.Example.Api.Tests/XUnit3Helper.Example.Api.Tests.csproj" Id="e0b3de1a-dfc4-481a-9043-54e3d2e0ffb0" />
+    <Project Path="example-tests/XUnit3Helper.Example.Api.UnitTests/XUnit3Helper.Example.Api.UnitTests.csproj" Id="71d84e53-7958-4793-a624-c1f4ee5aeb54" />
+  </Folder>
+  <Folder Name="/examples/">
+    <Project Path="examples/XUnit3Helper.Example.Api/XUnit3Helper.Example.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/XUnit3Helper.Common/XUnit3Helper.Common.csproj" Id="6f4be38c-fdbe-440f-b99a-56f74fc7b2b1" />
+    <Project Path="src/XUnit3Helper.Integration/XUnit3Helper.Integration.csproj" Id="07405647-412f-4036-9e4c-ecba3da9edbd" />
+    <Project Path="src/XUnit3Helper.Unit/XUnit3Helper.Unit.csproj" Id="30706844-c1e1-4528-ace2-7240d2b8f644" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/XUnit3Helper.Common.Tests/XUnit3Helper.Common.Tests.csproj" Id="e445f338-344a-4097-85e2-9e265b6f1b7f" />
+    <Project Path="tests/XUnit3Helper.Integration.Tests/XUnit3Helper.Integration.Tests.csproj" Id="4d4bd210-e096-4550-b9d7-aca48434c028" />
+    <Project Path="tests/XUnit3Helper.Unit.Tests/XUnit3Helper.Unit.Tests.csproj" Id="0bd47b6a-ca4a-47ea-af37-d1b2843ebc39" />
+  </Folder>
+  <Folder Name="/_items-solution/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="ChangeLog.md" />
+    <File Path="LICENSE.txt" />
+    <File Path="README.md" />
+  </Folder>
+</Solution>
