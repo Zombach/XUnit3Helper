@@ -5,7 +5,6 @@ using XUnit3Helper.Example.Api.Application.Features.Health;
 
 namespace XUnit3Helper.Example.Api.Api.Controllers;
 
-[Route("[controller]")]
 public sealed class HealthController(ISender sender)
     : BaseController
 {

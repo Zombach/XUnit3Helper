@@ -21,6 +21,7 @@
   <ItemGroup>
     <PackageReference Include="AutoFixture.AutoMoq" Version="5.0.0-preview0012" />
     <PackageReference Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
+    <!-- For non-profit use of version 8 and above, Fluentssertions are free, for a commercial one, a paid license is required. https://github.com/fluentassertions/fluentassertions/blob/main/LICENSE -->
     <PackageReference Include="FluentAssertions" Version="[7.2.0, 8)" />
   </ItemGroup>
 

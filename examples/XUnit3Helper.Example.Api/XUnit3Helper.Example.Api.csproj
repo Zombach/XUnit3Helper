@@ -13,6 +13,7 @@
     <PackageReference Include="MediatR" Version="13.0.0" />
     <PackageReference Include="Refit" Version="8.0.0" />
     <PackageReference Include="Refit.HttpClientFactory" Version="8.0.0" />
+    <PackageReference Include="Riok.Mapperly" Version="4.3.0-next.4" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.4" />
@@ -25,6 +26,7 @@
   <ItemGroup>
     <Folder Include="Api\Requests\" />
     <Folder Include="Api\Responses\" />
+    <Folder Include="Common\Mapperly\" />
   </ItemGroup>
 
 </Project>
