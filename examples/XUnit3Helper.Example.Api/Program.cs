@@ -1,23 +1,12 @@
+using XUnit3Helper.Example.Api;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var startup = new Startup(builder.Environment);
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+startup.ConfigureServices(builder.Services);
 
-var app = builder.Build();
+var applicationBuilder = builder.Build();
+startup.Configure(applicationBuilder);
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
+await applicationBuilder.RunAsync();

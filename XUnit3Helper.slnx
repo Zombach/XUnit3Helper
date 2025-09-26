@@ -10,6 +10,7 @@
   <Folder Name="/src/">
     <Project Path="src/XUnit3Helper.Common/XUnit3Helper.Common.csproj" Id="6f4be38c-fdbe-440f-b99a-56f74fc7b2b1" />
     <Project Path="src/XUnit3Helper.Integration/XUnit3Helper.Integration.csproj" Id="07405647-412f-4036-9e4c-ecba3da9edbd" />
+    <Project Path="src/XUnit3Helper.StartupModule/XUnit3Helper.StartupModule.csproj" Id="7ace1c60-bd2c-46bb-9277-f9c5287784da" />
     <Project Path="src/XUnit3Helper.Unit/XUnit3Helper.Unit.csproj" Id="30706844-c1e1-4528-ace2-7240d2b8f644" />
   </Folder>
   <Folder Name="/tests/">
