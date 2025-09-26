@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="2.0.1" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Refit" Version="8.0.0" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="8.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.4" />
@@ -16,6 +20,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\XUnit3Helper.StartupModule\XUnit3Helper.StartupModule.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Api\Requests\" />
+    <Folder Include="Api\Responses\" />
   </ItemGroup>
 
 </Project>

@@ -20,6 +20,9 @@ public sealed class Startup(IWebHostEnvironment environment)
 
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
+
+        services.AddMediatR(configure => configure
+            .RegisterServicesFromAssembly(typeof(Startup).Assembly));
     }
 
     public void Configure(IApplicationBuilder app)
