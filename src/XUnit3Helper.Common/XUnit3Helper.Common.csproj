@@ -4,6 +4,32 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Authors>ZLoo</Authors>
+    <PakageId>XUnit3Helper.Common</PakageId>
+    <RootNamespace>XUnit3Helper.Common</RootNamespace>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoFixture.AutoMoq" Version="5.0.0-preview0012" />
+    <PackageReference Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
+    <PackageReference Include="FluentAssertions" Version="[7.2.0, 8)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.analyzers" Version="1.24.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit.v3.extensibility.core" Version="3.0.1" />
+  </ItemGroup>
 
 </Project>

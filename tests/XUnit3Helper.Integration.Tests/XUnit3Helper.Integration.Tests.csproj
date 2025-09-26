@@ -22,4 +22,8 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\XUnit3Helper.Integration\XUnit3Helper.Integration.csproj" />
+  </ItemGroup>
+
 </Project>

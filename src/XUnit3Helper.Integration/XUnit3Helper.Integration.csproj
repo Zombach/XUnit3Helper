@@ -4,6 +4,18 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Authors>ZLoo</Authors>
+    <PakageId>XUnit3Helper.Integration</PakageId>
+    <RootNamespace>XUnit3Helper.Integration</RootNamespace>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XUnit3Helper.Common\XUnit3Helper.Common.csproj" />
+  </ItemGroup>
 
 </Project>
