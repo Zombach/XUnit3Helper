@@ -7,12 +7,21 @@
     <Authors>ZLoo</Authors>
     <PakageId>XUnit3Helper.Unit</PakageId>
     <RootNamespace>XUnit3Helper.Unit</RootNamespace>
+    <Version>0.0.1-alpha</Version>
+    <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\XUnit3Helper.Common\XUnit3Helper.Common.csproj" />

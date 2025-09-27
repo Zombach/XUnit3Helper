@@ -3,7 +3,7 @@ using Refit;
 
 namespace XUnit3Helper.Example.Api.Infrastructure.ExternalApis.JsonPlaceHolder;
 
-internal interface IJsonPlaceHolderClient
+public interface IJsonPlaceHolderClient
 {
     [Get("/posts/{id}")]
     public Task<ApiResponse<JsonPlaceHolderResponse>> GetPostsByIdAsync(

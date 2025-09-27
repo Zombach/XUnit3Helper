@@ -7,6 +7,8 @@
     <Authors>ZLoo</Authors>
     <PakageId>XUnit3Helper.Integration</PakageId>
     <RootNamespace>XUnit3Helper.Integration</RootNamespace>
+    <Version>0.0.1-alpha</Version>
+    <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -17,6 +19,13 @@
   <ItemGroup>
     <PackageReference Include="Serilog.Extensions.Hosting" Version="9.0.1-dev-02307" />
     <PackageReference Include="Serilog.Sinks.Console" Version="6.0.1-dev-00953" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>

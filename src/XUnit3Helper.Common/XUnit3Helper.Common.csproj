@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -7,6 +7,8 @@
     <Authors>ZLoo</Authors>
     <PakageId>XUnit3Helper.Common</PakageId>
     <RootNamespace>XUnit3Helper.Common</RootNamespace>
+    <Version>0.0.1-alpha</Version>
+    <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -23,6 +25,7 @@
     <PackageReference Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
     <!-- For non-profit use of version 8 and above, Fluentssertions are free, for a commercial one, a paid license is required. https://github.com/fluentassertions/fluentassertions/blob/main/LICENSE -->
     <PackageReference Include="FluentAssertions" Version="[7.2.0, 8)" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-rc.1.25451.107" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +34,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="xunit.v3.extensibility.core" Version="3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

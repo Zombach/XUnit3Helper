@@ -1,0 +1,6 @@
+#nullable enable
+static XUnit3Helper.Common.Extensions.MockExtension.AddMocks(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, params System.Collections.Generic.IEnumerable<System.Type!>! types) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static XUnit3Helper.Common.Impl.CustomAutoDataAttribute.CreateFixture(AutoFixture.IFixture! fixture) -> AutoFixture.IFixture!
+XUnit3Helper.Common.Impl.CustomAutoDataAttribute
+XUnit3Helper.Common.Impl.CustomAutoDataAttribute.CustomAutoDataAttribute() -> void
+XUnit3Helper.Common.Impl.CustomAutoDataAttribute.CustomAutoDataAttribute(System.Func<AutoFixture.IFixture!>! fixtureFactory) -> void

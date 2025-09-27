@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Extensions.Hosting;
 using Xunit;
+using XUnit3Helper.Common.Extensions;
 using XUnit3Helper.StartupModule;
 
 namespace XUnit3Helper.Integration;
@@ -37,6 +38,8 @@ public abstract class BaseWebApplicationFactory<TStartupModule>
 {
     public Lazy<WebApplication> LazyServer => LazyServers
         .GetValueOrDefault(ServerKey) ?? throw new ArgumentException(nameof(LazyServer));
+
+    protected virtual IEnumerable<Type> ServiceTypeForMock { get; } = new List<Type>();
 
     public ushort ServerPort => GetServerPort();
 
@@ -91,6 +94,8 @@ public abstract class BaseWebApplicationFactory<TStartupModule>
 
             var services = webApplicationBuilder.Services;
             startup.ConfigureServices(services);
+
+            services.AddMocks(ServiceTypeForMock);
 
             services.AddControllers()
                 .AddApplicationPart(ControllersAssembly);

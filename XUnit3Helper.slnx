@@ -26,4 +26,11 @@
     <File Path="LICENSE.txt" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/_items-solution/.github/">
+    <File Path=".github/dependabot.yml" />
+    <File Path=".github/pull_request_template.md" />
+  </Folder>
+  <Folder Name="/_items-solution/.github/workflows/">
+    <File Path=".github/workflows/release.yml" />
+  </Folder>
 </Solution>

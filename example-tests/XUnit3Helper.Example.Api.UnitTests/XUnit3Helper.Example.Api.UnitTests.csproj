@@ -43,4 +43,8 @@
     <ProjectReference Include="..\..\examples\XUnit3Helper.Example.Api\XUnit3Helper.Example.Api.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
 </Project>
