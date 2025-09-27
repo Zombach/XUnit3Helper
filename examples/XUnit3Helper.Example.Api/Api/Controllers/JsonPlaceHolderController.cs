@@ -9,7 +9,7 @@ public sealed class JsonPlaceHolderController(ISender sender)
     : BaseController
 {
     [HttpGet]
-    [Route("/posts/{id}")]
+    [Route("posts/{id}")]
     public async Task<IActionResult> GetPostsById(
         [FromRoute] int id,
         CancellationToken cancellationToken = default)
