@@ -8,8 +8,6 @@ updates:
   # Enable version updates for npm
   - package-ecosystem: nuget
     directory: "/"
-    registries:
-      - public-nuget
     schedule:
       interval: weekly
       day: thursday
