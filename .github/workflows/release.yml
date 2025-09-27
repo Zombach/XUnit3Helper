@@ -150,7 +150,7 @@ jobs:
     steps:
       # Чекаут на комит ветки для доступа к исходному коду
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Установка SDK
       - name: Setup .NET
