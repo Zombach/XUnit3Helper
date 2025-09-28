@@ -4,16 +4,21 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Authors>ZLoo</Authors>
-    <PakageId>XUnit3Helper.Integration</PakageId>
     <RootNamespace>XUnit3Helper.Integration</RootNamespace>
-    <Version>0.0.1-alpha</Version>
-    <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PakageId>XUnit3Helper.Integration</PakageId>
+    <Version>0.0.1-alpha</Version>
+    <Authors>ZLoo</Authors>
+    <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
+    <PackageTags>xunit, v3, lib</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

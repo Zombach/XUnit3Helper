@@ -4,16 +4,21 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Authors>ZLoo</Authors>
-    <PakageId>XUnit3Helper.Common</PakageId>
     <RootNamespace>XUnit3Helper.Common</RootNamespace>
-    <Version>0.0.1-alpha</Version>
-    <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PakageId>XUnit3Helper.Common</PakageId>
+    <Version>0.0.1-alpha</Version>
+    <Authors>ZLoo</Authors>
+    <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
+    <PackageTags>xunit, v3, lib</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,7 +29,7 @@
     <PackageReference Include="AutoFixture.AutoMoq" Version="5.0.0-preview0012" />
     <PackageReference Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
     <!-- For non-profit use of version 8 and above, Fluentssertions are free, for a commercial one, a paid license is required. https://github.com/fluentassertions/fluentassertions/blob/main/LICENSE -->
-    <PackageReference Include="FluentAssertions" Version="[7.2.0, 8)" />
+    <PackageReference Include="FluentAssertions" Version="[7.2.0, )" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-rc.1.25451.107" />
   </ItemGroup>
 
