@@ -19,6 +19,8 @@ jobs:
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.x'
 
       - name: Run CommonTests
         shell: pwsh
@@ -195,6 +197,8 @@ jobs:
       # Установка SDK
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.x'
 
       # Сборка и упаковка пакета
       - name: Pack XUnit3Helper.Common
@@ -241,6 +245,8 @@ jobs:
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.x'
 
       # С помощью dotnet утилиты nuget публикуе пакет
       - name: Publish NuGet package
