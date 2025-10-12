@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Extensions.Hosting;
 using Xunit;
-using XUnit3Helper.Common.Extensions;
+using XUnit3Helper.Extensions;
 using XUnit3Helper.StartupModule;
 
 namespace XUnit3Helper.Integration;

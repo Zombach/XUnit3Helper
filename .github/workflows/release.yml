@@ -22,17 +22,13 @@ jobs:
         with:
           dotnet-version: '10.x'
 
-      - name: Run CommonTests
+      - name: Run Tests
         shell: pwsh
-        run: dotnet test --configuration Release .\tests\XUnit3Helper.Common.Tests
+        run: dotnet test --configuration Release .\tests\XUnit3Helper.Tests
 
       - name: Run IntegrationTests
         shell: pwsh
         run: dotnet test --configuration Release .\tests\XUnit3Helper.Integration.Tests
-
-      - name: Run UnitTests
-        shell: pwsh
-        run: dotnet test --configuration Release .\tests\XUnit3Helper.Unit.Tests
   
   # 3. Добавление проверки текущей версии проекта
   check_version:
@@ -46,11 +42,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: Get project version from XUnit3Helper.Common.csproj
+      - name: Get project version from XUnit3Helper.csproj
         shell: bash
         run: |
           # Получаем версию проекта из csproj файла
-          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper.Common/XUnit3Helper.Common.csproj)
+          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper/XUnit3Helper.csproj)
           echo "Project version is $VERSION"
           # Сохраняем результат в переменную VERSION
           echo "VERSION=$VERSION" >> $GITHUB_ENV
@@ -60,15 +56,6 @@ jobs:
         run: |
           # Получаем версию проекта из csproj файла
           VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper.Integration/XUnit3Helper.Integration.csproj)
-          echo "Project version is $VERSION"
-          # Сохраняем результат в переменную VERSION
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-
-      - name: Get project version from XUnit3Helper.Unit.csproj
-        shell: bash
-        run: |
-          # Получаем версию проекта из csproj файла
-          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper.Unit/XUnit3Helper.Unit.csproj)
           echo "Project version is $VERSION"
           # Сохраняем результат в переменную VERSION
           echo "VERSION=$VERSION" >> $GITHUB_ENV
@@ -118,10 +105,10 @@ jobs:
 
       # Используя второй раз один и тот же код, правильнее было бы вынести его в отдельный action
       # Для упрощения примера, оставим дубляж
-      - name: Get project version from XUnit3Helper.Common.csproj
+      - name: Get project version from XUnit3Helper.csproj
         shell: bash
         run: |
-          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper.Common/XUnit3Helper.Common.csproj)
+          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper.XUnit3Helper.csproj)
           echo "Project version is $VERSION"
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
@@ -129,13 +116,6 @@ jobs:
         shell: bash
         run: |
           VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper.Integration/XUnit3Helper.Integration.csproj)
-          echo "Project version is $VERSION"
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-
-      - name: Get project version from XUnit3Helper.Unit.csproj
-        shell: bash
-        run: |
-          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper.Unit/XUnit3Helper.Unit.csproj)
           echo "Project version is $VERSION"
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
@@ -201,20 +181,15 @@ jobs:
           dotnet-version: '10.x'
 
       # Сборка и упаковка пакета
-      - name: Pack XUnit3Helper.Common
+      - name: Pack XUnit3Helper
         shell: pwsh
-        run: dotnet pack .\src\XUnit3Helper.Common --configuration Release --output ${{ env.NuGetDirectory }}
+        run: dotnet pack .\src\XUnit3Helper --configuration Release --output ${{ env.NuGetDirectory }}
 
         # Сборка и упаковка пакета
       - name: Pack XUnit3Helper.Integration
         shell: pwsh
         run: dotnet pack .\src\XUnit3Helper.Integration --configuration Release --output ${{ env.NuGetDirectory }}
-
-        # Сборка и упаковка пакета
-      - name: Pack XUnit3Helper.Unit
-        shell: pwsh
-        run: dotnet pack .\src\XUnit3Helper.Unit --configuration Release --output ${{ env.NuGetDirectory }}
-
+        
       # Загрузка артефакта в хранилище для доступа к нему из других джоб
       - uses: actions/upload-artifact@v5
         with:

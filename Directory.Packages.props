@@ -1,0 +1,54 @@
+<Project>
+  <!--
+  <ItemGroup Condition="$([MSBuild]::IsTargetFrameworkCompatible($(TargetFramework), 'net9.0'))">
+  -->
+  <ItemGroup>
+    <PackageVersion Include="AutoFixture.AutoMoq" Version="5.0.0-preview0012" />
+    <PackageVersion Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- For non-profit use of version 8 and above, Fluentssertions are free, for a commercial one, a paid license is required. https://github.com/fluentassertions/fluentassertions/blob/main/LICENSE -->
+    <PackageVersion Include="FluentAssertions" Version="[7.2.0, )" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-rc.1.25451.107" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.6" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.6" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="Refit" Version="8.0.0" />
+    <PackageVersion Include="Refit.HttpClientFactory" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="ErrorOr" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- For non-profit use of version 13 and above, MediatR are free, for a commercial one, a paid license is required. https://github.com/LuckyPennySoftware/MediatR/blob/master/LICENSE.md -->
+    <PackageVersion Include="MediatR" Version="12.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="Moq" Version="4.20.72" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="Riok.Mapperly" Version="4.3.0-next.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="Serilog.Extensions.Hosting" Version="9.0.1-dev-02307" />
+    <PackageVersion Include="Serilog.Sinks.Console" Version="6.0.1-dev-00953" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="coverlet.msbuild" Version="6.0.4" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="xunit.v3" Version="3.1.0" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+    <PackageVersion Include="xunit.analyzers" Version="1.24.0" />
+    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.1.0" />
+  </ItemGroup>
+</Project>

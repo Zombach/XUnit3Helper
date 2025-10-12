@@ -1,23 +1,23 @@
 #nullable enable
-abstract XUnit3Helper.Integration.BaseWebApplicationFactory.ControllersAssembly.get -> System.Reflection.Assembly
+abstract XUnit3Helper.Integration.BaseWebApplicationFactory.ControllersAssembly.get -> System.Reflection.Assembly!
 abstract XUnit3Helper.Integration.BaseWebApplicationFactory.ServerKey.get -> System.Guid
-static readonly XUnit3Helper.Integration.BaseWebApplicationFactory.LazyServers -> System.Collections.Concurrent.ConcurrentDictionary<System.Guid, System.Lazy<Microsoft.AspNetCore.Builder.WebApplication>>
-static readonly XUnit3Helper.Integration.BaseWebApplicationFactory.Logger -> Serilog.Extensions.Hosting.ReloadableLogger
-static readonly XUnit3Helper.Integration.BaseWebApplicationFactory.ServerPorts -> System.Collections.Concurrent.ConcurrentDictionary<System.Guid, ushort>
-virtual XUnit3Helper.Integration.BaseWebApplicationFactory.Environment.get -> string
-virtual XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.ConfigureAppConfiguration(Microsoft.Extensions.Configuration.IConfigurationBuilder configurationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment webHostEnvironment) -> Microsoft.Extensions.Configuration.IConfigurationBuilder
-virtual XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.CreateTestServer() -> Microsoft.AspNetCore.Builder.WebApplication
+static readonly XUnit3Helper.Integration.BaseWebApplicationFactory.LazyServers -> System.Collections.Concurrent.ConcurrentDictionary<System.Guid, System.Lazy<Microsoft.AspNetCore.Builder.WebApplication!>!>!
+static readonly XUnit3Helper.Integration.BaseWebApplicationFactory.Logger -> Serilog.Extensions.Hosting.ReloadableLogger!
+static readonly XUnit3Helper.Integration.BaseWebApplicationFactory.ServerPorts -> System.Collections.Concurrent.ConcurrentDictionary<System.Guid, ushort>!
+virtual XUnit3Helper.Integration.BaseWebApplicationFactory.Environment.get -> string!
+virtual XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.ConfigureAppConfiguration(Microsoft.Extensions.Configuration.IConfigurationBuilder! configurationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment! webHostEnvironment) -> Microsoft.Extensions.Configuration.IConfigurationBuilder!
+virtual XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.CreateTestServer() -> Microsoft.AspNetCore.Builder.WebApplication!
 virtual XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.DisposeAsync() -> System.Threading.Tasks.ValueTask
-virtual XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.ServiceTypeForMock.get -> System.Collections.Generic.IEnumerable<System.Type>
+virtual XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.ServiceTypeForMock.get -> System.Collections.Generic.IEnumerable<System.Type!>!
 XUnit3Helper.Integration.BaseControllerTests<TServiceStartup, TApplicationFactory>
-XUnit3Helper.Integration.BaseControllerTests<TServiceStartup, TApplicationFactory>.BaseControllerTests(TApplicationFactory applicationFactory) -> void
-XUnit3Helper.Integration.BaseControllerTests<TServiceStartup, TApplicationFactory>.CreateClient() -> System.Net.Http.HttpClient
-XUnit3Helper.Integration.BaseControllerTests<TServiceStartup, TApplicationFactory>.Server.get -> Microsoft.AspNetCore.Builder.IApplicationBuilder
-XUnit3Helper.Integration.BaseControllerTests<TServiceStartup, TApplicationFactory>.Services.get -> System.IServiceProvider
+XUnit3Helper.Integration.BaseControllerTests<TServiceStartup, TApplicationFactory>.BaseControllerTests(TApplicationFactory! applicationFactory) -> void
+XUnit3Helper.Integration.BaseControllerTests<TServiceStartup, TApplicationFactory>.CreateClient() -> System.Net.Http.HttpClient!
+XUnit3Helper.Integration.BaseControllerTests<TServiceStartup, TApplicationFactory>.Server.get -> Microsoft.AspNetCore.Builder.IApplicationBuilder!
+XUnit3Helper.Integration.BaseControllerTests<TServiceStartup, TApplicationFactory>.Services.get -> System.IServiceProvider!
 XUnit3Helper.Integration.BaseWebApplicationFactory
 XUnit3Helper.Integration.BaseWebApplicationFactory.BaseWebApplicationFactory() -> void
 XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>
 XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.BaseWebApplicationFactory() -> void
 XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.InitializeAsync() -> System.Threading.Tasks.ValueTask
-XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.LazyServer.get -> System.Lazy<Microsoft.AspNetCore.Builder.WebApplication>
+XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.LazyServer.get -> System.Lazy<Microsoft.AspNetCore.Builder.WebApplication!>!
 XUnit3Helper.Integration.BaseWebApplicationFactory<TStartupModule>.ServerPort.get -> ushort

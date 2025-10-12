@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Moq;
 
-namespace XUnit3Helper.Common.Extensions;
+namespace XUnit3Helper.Extensions;
 
 public static class MockExtension
 {

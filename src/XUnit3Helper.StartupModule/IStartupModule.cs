@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -8,7 +8,7 @@ public interface IStartupModule
 {
     IConfiguration Configuration { get; }
 
-    void ConfigureServices(IServiceCollection services);
+    IServiceCollection ConfigureServices(IServiceCollection services);
 
-    void Configure(IApplicationBuilder app);
+    IApplicationBuilder Configure(IApplicationBuilder app);
 }

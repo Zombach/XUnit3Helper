@@ -4,8 +4,8 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using Refit;
-using XUnit3Helper.Common.Impl;
 using XUnit3Helper.Example.Api.Infrastructure.ExternalApis.JsonPlaceHolder;
+using XUnit3Helper.Impl;
 using XUnit3Helper.Integration;
 
 namespace XUnit3Helper.Example.Api.IntegrationTests.Api.Controllers;
