@@ -1,5 +1,5 @@
 using ErrorOr;
-using MediatR;
+using Mediator;
 
 namespace XUnit3Helper.Example.Api.Application.Features.Common;
 
@@ -14,11 +14,11 @@ internal abstract class BaseHandler<TRequest, TResult>(ILogger logger)
 {
     protected ILogger Logger => logger;
 
-    protected abstract Task<ErrorOr<TResult>> HandlerInternal(
+    protected abstract ValueTask<ErrorOr<TResult>> HandlerInternal(
         TRequest request,
         CancellationToken cancellationToken);
 
-    public async Task<ErrorOr<TResult>> Handle(
+    public virtual async ValueTask<ErrorOr<TResult>> Handle(
         TRequest request,
         CancellationToken cancellationToken = default)
     {

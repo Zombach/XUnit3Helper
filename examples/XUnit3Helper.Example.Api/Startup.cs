@@ -1,16 +1,15 @@
+using XUnit3Helper.Example.Api.Application.Features.Common;
 using XUnit3Helper.Example.Api.Infrastructure.ExternalApis;
 using XUnit3Helper.StartupModule;
 
 namespace XUnit3Helper.Example.Api;
 
-public sealed class Startup(IWebHostEnvironment environment)
+public sealed class Startup(
+    IWebHostEnvironment environment,
+    ConfigurationManager configurationManager)
     : IStartupModule
 {
-    public IConfiguration Configuration { get; } = new ConfigurationBuilder()
-        .SetBasePath(environment.ContentRootPath)
-        .AddJsonFile("appsettings.json")
-        .AddEnvironmentVariables()
-        .Build();
+    public IConfiguration Configuration { get; } = CreateConfiguration(environment, configurationManager);
 
     public IServiceCollection ConfigureServices(IServiceCollection services)
     {
@@ -22,9 +21,10 @@ public sealed class Startup(IWebHostEnvironment environment)
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
 
-        services.AddMediatR(configure =>
+        services.AddMediator(options =>
         {
-            configure.RegisterServicesFromAssembly(typeof(Startup).Assembly);
+            options.ServiceLifetime = ServiceLifetime.Scoped;
+            options.Assemblies = [typeof(BaseHandler<>)];
         });
 
         services.AddExternalApis(Configuration);
@@ -51,5 +51,17 @@ public sealed class Startup(IWebHostEnvironment environment)
         app.UseEndpoints(configure => configure.MapControllers());
 
         return app;
+    }
+
+    private static IConfiguration CreateConfiguration(
+        IWebHostEnvironment environment,
+        ConfigurationManager configurationManager)
+    {
+        return configurationManager
+            .SetBasePath(environment.ContentRootPath)
+            .AddJsonFile("appsettings.json")
+            .AddJsonFile($"appsettings.{environment.EnvironmentName}.json", true)
+            .AddEnvironmentVariables()
+            .Build();
     }
 }

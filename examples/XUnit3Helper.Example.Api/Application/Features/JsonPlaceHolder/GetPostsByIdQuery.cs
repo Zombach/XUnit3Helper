@@ -1,6 +1,5 @@
-using System.Text.Json;
 using ErrorOr;
-using MediatR;
+using Mediator;
 using XUnit3Helper.Example.Api.Application.Features.Common;
 using XUnit3Helper.Example.Api.Infrastructure.ExternalApis.JsonPlaceHolder;
 
@@ -14,7 +13,7 @@ internal sealed record GetPostsByIdQuery(int Id)
         ILogger<GetPostsByIdQuery> logger)
         : BaseHandler<GetPostsByIdQuery, JsonPlaceHolderResponse>(logger)
     {
-        protected override async Task<ErrorOr<JsonPlaceHolderResponse>> HandlerInternal(
+        protected override async ValueTask<ErrorOr<JsonPlaceHolderResponse>> HandlerInternal(
             GetPostsByIdQuery request,
             CancellationToken cancellationToken)
         {

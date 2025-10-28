@@ -1,4 +1,4 @@
-using MediatR;
+using Mediator;
 using Microsoft.AspNetCore.Mvc;
 using XUnit3Helper.Example.Api.Api.Controllers.Common;
 using XUnit3Helper.Example.Api.Application.Features.Health;
