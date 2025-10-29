@@ -108,7 +108,7 @@ jobs:
       - name: Get project version from XUnit3Helper.csproj
         shell: bash
         run: |
-          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper.XUnit3Helper.csproj)
+          VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" ./src/XUnit3Helper/XUnit3Helper.csproj)
           echo "Project version is $VERSION"
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
