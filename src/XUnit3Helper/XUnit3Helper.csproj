@@ -16,7 +16,6 @@
   <PropertyGroup>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PakageId>XUnit3Helper</PakageId>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Version>0.0.2-alpha</Version>
     <Authors>ZLoo</Authors>
     <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
