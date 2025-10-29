@@ -10,12 +10,14 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PakageId>XUnit3Helper.Integration</PakageId>
-    <Version>0.0.1-alpha</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>0.0.2-alpha</Version>
     <Authors>ZLoo</Authors>
     <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
     <PackageTags>xunit, v3, lib</PackageTags>
@@ -36,6 +38,10 @@
   <ItemGroup>
     <ProjectReference Include="..\XUnit3Helper.StartupModule\XUnit3Helper.StartupModule.csproj" />
     <ProjectReference Include="..\XUnit3Helper\XUnit3Helper.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
   </ItemGroup>
 
 </Project>

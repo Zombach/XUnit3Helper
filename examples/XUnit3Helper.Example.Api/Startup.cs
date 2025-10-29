@@ -7,11 +7,21 @@ namespace XUnit3Helper.Example.Api;
 public sealed class Startup(
     IWebHostEnvironment environment,
     ConfigurationManager configurationManager)
-    : IStartupModule
+    : BaseStartupModule(environment, configurationManager)
 {
-    public IConfiguration Configuration { get; } = CreateConfiguration(environment, configurationManager);
+    protected override IConfiguration ConfigureConfigurationInternal(
+        IWebHostEnvironment environment,
+        ConfigurationManager configurationManager)
+    {
+        return configurationManager
+            .SetBasePath(environment.ContentRootPath)
+            .AddJsonFile("appsettings.json")
+            .AddJsonFile($"appsettings.{environment.EnvironmentName}.json", true)
+            .AddEnvironmentVariables()
+            .Build();
+    }
 
-    public IServiceCollection ConfigureServices(IServiceCollection services)
+    public override IServiceCollection ConfigureServices(IServiceCollection services)
     {
         services.AddHttpContextAccessor();
 
@@ -32,7 +42,7 @@ public sealed class Startup(
         return services;
     }
 
-    public IApplicationBuilder Configure(IApplicationBuilder app)
+    public override IApplicationBuilder Configure(IApplicationBuilder app)
     {
         app.UseRouting();
 
@@ -51,17 +61,5 @@ public sealed class Startup(
         app.UseEndpoints(configure => configure.MapControllers());
 
         return app;
-    }
-
-    private static IConfiguration CreateConfiguration(
-        IWebHostEnvironment environment,
-        ConfigurationManager configurationManager)
-    {
-        return configurationManager
-            .SetBasePath(environment.ContentRootPath)
-            .AddJsonFile("appsettings.json")
-            .AddJsonFile($"appsettings.{environment.EnvironmentName}.json", true)
-            .AddEnvironmentVariables()
-            .Build();
     }
 }

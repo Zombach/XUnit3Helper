@@ -21,7 +21,7 @@
     <File Path=".gitattributes" />
     <File Path=".gitignore" />
     <File Path=".markdownlint.json" />
-    <File Path="ChangeLog.md" />
+    <File Path="CHANGELOG.md" />
     <File Path="CONTRIBUTING.md" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />

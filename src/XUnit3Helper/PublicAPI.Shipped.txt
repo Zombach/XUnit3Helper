@@ -1,1 +1,10 @@
 #nullable enable
+override XUnit3Helper.Impl.JsonFileDataAttribute.GetData(System.Reflection.MethodInfo! testMethod, Xunit.Sdk.DisposalTracker! disposalTracker) -> System.Threading.Tasks.ValueTask<System.Collections.Generic.IReadOnlyCollection<Xunit.ITheoryDataRow!>!>
+override XUnit3Helper.Impl.JsonFileDataAttribute.SupportsDiscoveryEnumeration() -> bool
+static XUnit3Helper.Extensions.MockExtension.AddMocks(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, params System.Collections.Generic.IEnumerable<System.Type!>! types) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+XUnit3Helper.Extensions.MockExtension
+XUnit3Helper.Impl.CustomAutoDataAttribute
+XUnit3Helper.Impl.CustomAutoDataAttribute.CustomAutoDataAttribute() -> void
+XUnit3Helper.Impl.CustomAutoDataAttribute.CustomAutoDataAttribute(System.Func<AutoFixture.IFixture!>! fixtureFactory) -> void
+XUnit3Helper.Impl.JsonFileDataAttribute
+XUnit3Helper.Impl.JsonFileDataAttribute.JsonFileDataAttribute() -> void

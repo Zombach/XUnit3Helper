@@ -11,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Extensions.Hosting;
-using Xunit;
 using XUnit3Helper.Extensions;
 using XUnit3Helper.StartupModule;
 
@@ -30,7 +29,7 @@ public abstract class BaseWebApplicationFactory
     protected abstract Guid ServerKey { get; }
     protected abstract Assembly ControllersAssembly { get; }
     protected virtual string Environment => "testing";
-    protected virtual IEnumerable<Type> ServiceTypeForMock { get; } = new List<Type>();
+    protected virtual IEnumerable<Type> ServiceTypeForMock { get; } = [];
 
     protected abstract WebApplication CreateTestServer();
 
@@ -99,7 +98,7 @@ public abstract class BaseWebApplicationFactory
 
 public abstract class BaseWebApplicationFactory<TStartupModule>
     : BaseWebApplicationFactory
-    where TStartupModule : class, IStartupModule
+    where TStartupModule : BaseStartupModule
 {
     public Lazy<WebApplication> LazyServer => LazyServers
         .GetValueOrDefault(ServerKey) ?? throw new ArgumentException(nameof(LazyServer));
@@ -149,11 +148,7 @@ public abstract class BaseWebApplicationFactory<TStartupModule>
             var services = webApplicationBuilder.Services;
             startup.ConfigureServices(services);
 
-#if NET10_0
-            services.AddMocks(ServiceTypeForMock);
-#else
-            services.AddMocks(ServiceTypeForMock.ToArray());
-#endif
+            services.AddMocks([.. ServiceTypeForMock]);
 
             services.AddControllers()
                 .AddApplicationPart(ControllersAssembly);
@@ -182,7 +177,7 @@ public abstract class BaseWebApplicationFactory<TStartupModule>
         return configurationBuilder;
     }
 
-    private static IStartupModule CreateStartupModule(
+    private static BaseStartupModule CreateStartupModule(
         IWebHostEnvironment webHostEnvironment,
         ConfigurationManager configurationManager)
     {

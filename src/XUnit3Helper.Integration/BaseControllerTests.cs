@@ -6,7 +6,7 @@ namespace XUnit3Helper.Integration;
 
 public abstract class BaseControllerTests<TServiceStartup, TApplicationFactory>(TApplicationFactory applicationFactory)
     where TApplicationFactory : BaseWebApplicationFactory<TServiceStartup>
-    where TServiceStartup : class, IStartupModule
+    where TServiceStartup : BaseStartupModule
 {
     private readonly Lazy<IServiceProvider> _lazyServices = new(() => applicationFactory.LazyServer.Value.Services, LazyThreadSafetyMode.ExecutionAndPublication);
 
@@ -15,7 +15,7 @@ public abstract class BaseControllerTests<TServiceStartup, TApplicationFactory>(
 
     protected HttpClient CreateClient()
     {
-        var httpClientFactory = Services
+        var httpClientFactory = Server.ApplicationServices
             .GetRequiredService<IHttpClientFactory>();
 
         var httpClient = httpClientFactory.CreateClient();

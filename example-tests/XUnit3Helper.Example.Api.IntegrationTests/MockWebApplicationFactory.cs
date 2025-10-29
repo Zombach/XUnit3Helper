@@ -13,8 +13,5 @@ public sealed class MockWebApplicationFactory
     protected override Guid ServerKey { get; } = Guid.CreateVersion7();
     protected override Assembly ControllersAssembly { get; } = typeof(BaseController).Assembly;
 
-    protected override IEnumerable<Type> ServiceTypeForMock => new List<Type>
-    {
-        typeof(IJsonPlaceHolderClient)
-    };
+    protected override IEnumerable<Type> ServiceTypeForMock => [typeof(IJsonPlaceHolderClient)];
 }
