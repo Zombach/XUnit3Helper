@@ -40,8 +40,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\examples\XUnit3Helper.Example.Api\XUnit3Helper.Example.Api.csproj" />
     <ProjectReference Include="..\..\src\XUnit3Helper\XUnit3Helper.csproj" />
+    <ProjectReference Include="..\XUnit3Helper.Example.Api\XUnit3Helper.Example.Api.csproj" />
   </ItemGroup>
 
 </Project>

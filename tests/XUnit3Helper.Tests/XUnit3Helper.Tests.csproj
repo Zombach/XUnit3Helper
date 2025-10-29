@@ -33,8 +33,4 @@
     <ProjectReference Include="..\..\src\XUnit3Helper\XUnit3Helper.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
 </Project>
