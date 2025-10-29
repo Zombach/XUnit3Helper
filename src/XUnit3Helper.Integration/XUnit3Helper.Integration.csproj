@@ -16,11 +16,16 @@
   <PropertyGroup>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PakageId>XUnit3Helper.Integration</PakageId>
-    <Version>0.0.2-alpha</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>0.0.3-alpha</Version>
     <Authors>ZLoo</Authors>
     <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
     <PackageTags>xunit, v3, lib</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Serilog.Extensions.Hosting" />
