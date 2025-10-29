@@ -149,7 +149,11 @@ public abstract class BaseWebApplicationFactory<TStartupModule>
             var services = webApplicationBuilder.Services;
             startup.ConfigureServices(services);
 
+#if NET10_0
             services.AddMocks(ServiceTypeForMock);
+#else
+            services.AddMocks(ServiceTypeForMock.ToArray());
+#endif
 
             services.AddControllers()
                 .AddApplicationPart(ControllersAssembly);
