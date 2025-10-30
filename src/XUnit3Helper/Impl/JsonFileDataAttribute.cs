@@ -10,7 +10,7 @@ namespace XUnit3Helper.Impl;
 public sealed class JsonFileDataAttribute(
     string filePath,
     bool simpleTypeJson = false,
-    string? sectionName = null)
+    string? sectionKey = null)
     : DataAttribute
 {
     public override ValueTask<IReadOnlyCollection<ITheoryDataRow>> GetData(
@@ -21,9 +21,9 @@ public sealed class JsonFileDataAttribute(
 
         var parameters = testMethod.GetParameters();
         var parameterTypes = parameters.Select(x => x.ParameterType).ToArray();
-        if (parameterTypes.Length is 0 or > 13)
+        if (parameterTypes.Length is 0 || simpleTypeJson && parameterTypes.Length > 15)
         {
-            throw new ArgumentException($"parameterTypes should be > 0 < 13: {parameterTypes}");
+            throw new ArgumentException($"parameterTypes should be > 0 and < 15: {parameterTypes}");
         }
 
         var jsonPath = Path.IsPathRooted(filePath)
@@ -36,6 +36,11 @@ public sealed class JsonFileDataAttribute(
         }
 
         var fileData = File.ReadAllText(jsonPath);
+
+        if (!string.IsNullOrEmpty(sectionKey))
+        {
+            fileData = GetSectionData(fileData, sectionKey);
+        }
 
         var theoryDataRows = simpleTypeJson
             ? CreateSimpleTheoryDataRows(fileData, parameterTypes)
@@ -89,5 +94,22 @@ public sealed class JsonFileDataAttribute(
         var theoryDataRows = (IEnumerable<ITheoryDataRow>)genericMethodInfo.Invoke(null, [fileData])!;
 
         return theoryDataRows;
+    }
+
+    private static string GetSectionData(string fileData, string sectionKey)
+    {
+        var options = new JsonDocumentOptions { AllowTrailingCommas = true, CommentHandling = JsonCommentHandling.Skip };
+        using var jsonDocument = JsonDocument.Parse(fileData, options);
+        using var objectEnumerator = jsonDocument.RootElement.EnumerateObject();
+
+        while (objectEnumerator.MoveNext())
+        {
+            if (objectEnumerator.Current.Name == sectionKey)
+            {
+                return objectEnumerator.Current.Value.GetRawText();
+            }
+        }
+
+        throw new ArgumentException("Не обнаружена секция: {sectionKey}");
     }
 }

@@ -10,218 +10,242 @@ internal static class GenerateTestDataExtension
         PropertyNameCaseInsensitive = true
     };
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1>(testData.P1));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1>(testData.P1));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2>(
             testData.P1, testData.P2));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3>(
             testData.P1, testData.P2, testData.P3));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3,
-        TParameter4>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3,
-            TParameter4>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3,
-            TParameter4>(
-            testData.P1, testData.P2, testData.P3,
-            testData.P4));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4>(
+            testData.P1, testData.P2, testData.P3, testData.P4));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5>(
-            testData.P1, testData.P2, testData.P3,
-            testData.P4, testData.P5));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6>(
-            testData.P1, testData.P2, testData.P3,
-            testData.P4, testData.P5, testData.P6));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6,
-        TParameter7>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7>(
-            testData.P1, testData.P2, testData.P3,
-            testData.P4, testData.P5, testData.P6,
-            testData.P7));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6, testData.P7));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6,
-        TParameter7, TParameter8>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8>(
-            testData.P1, testData.P2, testData.P3,
-            testData.P4, testData.P5, testData.P6,
-            testData.P7, testData.P8));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6, testData.P7, testData.P8));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6,
-        TParameter7, TParameter8, TParameter9>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8, TParameter9>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8, TParameter9>(
-            testData.P1, testData.P2, testData.P3,
-            testData.P4, testData.P5, testData.P6,
-            testData.P7, testData.P8, testData.P9));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6, testData.P7, testData.P8, testData.P9));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6,
-        TParameter7, TParameter8, TParameter9,
-        TParameter10>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8, TParameter9,
-            TParameter10>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8, TParameter9,
-            TParameter10>(
-            testData.P1, testData.P2, testData.P3,
-            testData.P4, testData.P5, testData.P6,
-            testData.P7, testData.P8, testData.P9,
-            testData.P10));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6, testData.P7, testData.P8, testData.P9, testData.P10));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6,
-        TParameter7, TParameter8, TParameter9,
-        TParameter10, TParameter11>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10,
+        TP11>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8, TParameter9,
-            TParameter10, TParameter11>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8, TParameter9,
-            TParameter10, TParameter11>(
-            testData.P1, testData.P2, testData.P3,
-            testData.P4, testData.P5, testData.P6,
-            testData.P7, testData.P8, testData.P9,
-            testData.P10, testData.P11));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
+            testData.P11));
     }
 
-    public static IEnumerable<ITheoryDataRow> GenerateTestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6,
-        TParameter7, TParameter8, TParameter9,
-        TParameter10, TParameter11, TParameter12>(string fileData)
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10,
+        TP11, TP12>(string fileData)
     {
-        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8, TParameter9,
-            TParameter10, TParameter11, TParameter12>>>(
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11, TP12>>>(
             fileData,
             s_jsonSerializerOptions);
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TParameter1, TParameter2, TParameter3,
-            TParameter4, TParameter5, TParameter6,
-            TParameter7, TParameter8, TParameter9,
-            TParameter10, TParameter11, TParameter12>(
-            testData.P1, testData.P2, testData.P3,
-            testData.P4, testData.P5, testData.P6,
-            testData.P7, testData.P8, testData.P9,
-            testData.P10, testData.P11, testData.P12));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11, TP12>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
+            testData.P11, testData.P12));
+    }
+
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10,
+        TP11, TP12, TP13>(string fileData)
+    {
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11, TP12, TP13>>>(
+            fileData,
+            s_jsonSerializerOptions);
+
+        ArgumentNullException.ThrowIfNull(testDataCollection);
+
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11, TP12, TP13>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
+            testData.P11, testData.P12, testData.P13));
+    }
+
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10,
+        TP11, TP12, TP13, TP14>(string fileData)
+    {
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11, TP12, TP13, TP14>>>(
+            fileData,
+            s_jsonSerializerOptions);
+
+        ArgumentNullException.ThrowIfNull(testDataCollection);
+
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11, TP12, TP13, TP14>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
+            testData.P11, testData.P12, testData.P13, testData.P14));
+    }
+
+    public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10,
+        TP11, TP12, TP13, TP14, TP15>(string fileData)
+    {
+        var testDataCollection = JsonSerializer.Deserialize<IEnumerable<TestData<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11, TP12, TP13, TP14, TP15>>>(
+            fileData,
+            s_jsonSerializerOptions);
+
+        ArgumentNullException.ThrowIfNull(testDataCollection);
+
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
+            TP6, TP7, TP8, TP9, TP10,
+            TP11, TP12, TP13, TP14, TP15>(
+            testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
+            testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
+            testData.P11, testData.P12, testData.P13, testData.P14, testData.P15));
     }
 }

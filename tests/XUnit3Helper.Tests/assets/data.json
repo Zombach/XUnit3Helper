@@ -2,18 +2,32 @@
   {
     "p1": 1,
     "p2": {
-      "x": 1,
-      "c": {
-        "x": "1"
+      "text": "1",
+      "child": {
+        "boolean": false
+      }
+    },
+    "p3": {
+      "integer": 1,
+      "text": "1",
+      "child": {
+        "boolean": false
       }
     }
   },
   {
     "p1": 2,
     "p2": {
-      "x": 2,
-      "c": {
-        "x": "2"
+      "text": "2",
+      "child": {
+        "boolean": true
+      }
+    },
+    "p3": {
+      "integer": 2,
+      "text": "2",
+      "child": {
+        "boolean": true
       }
     }
   }

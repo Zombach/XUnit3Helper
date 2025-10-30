@@ -34,6 +34,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="assets\data-with-section.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\simple-type-data-with-section.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="assets\simple-type-data.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

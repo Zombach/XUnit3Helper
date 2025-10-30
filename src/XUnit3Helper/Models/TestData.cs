@@ -1,95 +1,118 @@
 namespace XUnit3Helper.Models;
 
-public class TestData<TParameter1, TParameter2, TParameter3, TParameter4,
-    TParameter5, TParameter6, TParameter7, TParameter8,
-    TParameter9, TParameter10, TParameter11, TParameter12>
-    : TestData<TParameter1, TParameter2, TParameter3, TParameter4,
-        TParameter5, TParameter6, TParameter7, TParameter8,
-        TParameter9, TParameter10, TParameter11>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6, TP7, TP8, TP9, TP10,
+    TP11, TP12, TP13, TP14, TP15>
+    : TestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10,
+        TP11, TP12, TP13, TP14>
 {
-    public TParameter12 P12 { get; init; }
+    public TP15 P15 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2, TParameter3, TParameter4,
-    TParameter5, TParameter6, TParameter7, TParameter8,
-    TParameter9, TParameter10, TParameter11>
-    : TestData<TParameter1, TParameter2, TParameter3, TParameter4,
-        TParameter5, TParameter6, TParameter7,
-        TParameter8, TParameter9, TParameter10>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6, TP7, TP8, TP9, TP10,
+    TP11, TP12, TP13, TP14>
+    : TestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10,
+        TP11, TP12, TP13>
 {
-    public TParameter11 P11 { get; init; }
+    public TP14 P14 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2, TParameter3, TParameter4,
-    TParameter5, TParameter6, TParameter7,
-    TParameter8, TParameter9, TParameter10>
-    : TestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6,
-        TParameter7, TParameter8, TParameter9>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6, TP7, TP8, TP9, TP10,
+    TP11, TP12, TP13>
+    : TestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10,
+        TP11, TP12>
 {
-    public TParameter10 P10 { get; init; }
+    public TP13 P13 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2, TParameter3,
-    TParameter4, TParameter5, TParameter6,
-    TParameter7, TParameter8, TParameter9>
-    : TestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6,
-        TParameter7, TParameter8>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6, TP7, TP8, TP9, TP10,
+    TP11, TP12>
+    : TestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10,
+        TP11>
 {
-    public TParameter9 P9 { get; init; }
+    public TP12 P12 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2, TParameter3, TParameter4,
-    TParameter5, TParameter6, TParameter7, TParameter8>
-    : TestData<TParameter1, TParameter2, TParameter3, TParameter4,
-        TParameter5, TParameter6, TParameter7>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6, TP7, TP8, TP9, TP10,
+    TP11>
+    : TestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9, TP10>
 {
-    public TParameter8 P8 { get; init; }
+    public TP11 P11 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2, TParameter3, TParameter4,
-    TParameter5, TParameter6, TParameter7>
-    : TestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5, TParameter6>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6, TP7, TP8, TP9, TP10>
+    : TestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8, TP9>
 {
-    public TParameter7 P7 { get; init; }
+    public TP10 P10 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2, TParameter3,
-    TParameter4, TParameter5, TParameter6>
-    : TestData<TParameter1, TParameter2, TParameter3,
-        TParameter4, TParameter5>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6, TP7, TP8, TP9>
+    : TestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7, TP8>
 {
-    public TParameter6 P6 { get; init; }
+    public TP9 P9 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2, TParameter3,
-    TParameter4, TParameter5>
-    : TestData<TParameter1, TParameter2, TParameter3, TParameter4>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6, TP7, TP8>
+    : TestData<TP1, TP2, TP3, TP4, TP5,
+        TP6, TP7>
 {
-    public TParameter5 P5 { get; init; }
+    public TP8 P8 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2, TParameter3, TParameter4>
-    : TestData<TParameter1, TParameter2, TParameter3>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6, TP7>
+    : TestData<TP1, TP2, TP3, TP4, TP5,
+        TP6>
 {
-    public TParameter4 P4 { get; init; }
+    public TP7 P7 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2, TParameter3>
-    : TestData<TParameter1, TParameter2>
+public class TestData<TP1, TP2, TP3, TP4, TP5,
+    TP6>
+    : TestData<TP1, TP2, TP3, TP4, TP5>
 {
-    public TParameter3 P3 { get; init; }
+    public TP6 P6 { get; init; }
 }
 
-public class TestData<TParameter1, TParameter2>
-    : TestData<TParameter1>
+public class TestData<TP1, TP2, TP3, TP4, TP5>
+    : TestData<TP1, TP2, TP3, TP4>
 {
-    public TParameter2 P2 { get; init; }
+    public TP5 P5 { get; init; }
 }
 
-public class TestData<TParameter1>
+public class TestData<TP1, TP2, TP3, TP4>
+    : TestData<TP1, TP2, TP3>
 {
-    public TParameter1 P1 { get; init; }
+    public TP4 P4 { get; init; }
+}
+
+public class TestData<TP1, TP2, TP3>
+    : TestData<TP1, TP2>
+{
+    public TP3 P3 { get; init; }
+}
+
+public class TestData<TP1, TP2>
+    : TestData<TP1>
+{
+    public TP2 P2 { get; init; }
+}
+
+public class TestData<TP1>
+{
+    public TP1 P1 { get; init; }
 }
