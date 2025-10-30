@@ -33,4 +33,13 @@
     <ProjectReference Include="..\..\src\XUnit3Helper\XUnit3Helper.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="assets\simple-type-data.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\data.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
