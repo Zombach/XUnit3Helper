@@ -5,6 +5,9 @@
   <ItemGroup>
     <PackageVersion Include="AutoFixture.AutoMoq" Version="5.0.0-preview0012" />
     <PackageVersion Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
+    <PackageVersion Include="XUnit3Helper" Version="0.0.3-alpha" />
+    <PackageVersion Include="XUnit3Helper.Integration" Version="0.0.3-alpha" />
+    <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.3-alpha" />
   </ItemGroup>
   <ItemGroup>
     <!-- For non-profit use of version 8 and above, Fluentssertions are free, for a commercial one, a paid license is required. https://github.com/fluentassertions/fluentassertions/blob/main/LICENSE -->

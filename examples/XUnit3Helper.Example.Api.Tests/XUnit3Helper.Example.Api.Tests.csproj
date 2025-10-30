@@ -20,6 +20,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="xunit.v3" />
+    <PackageReference Include="XUnit3Helper" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,7 +41,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\XUnit3Helper\XUnit3Helper.csproj" />
     <ProjectReference Include="..\XUnit3Helper.Example.Api\XUnit3Helper.Example.Api.csproj" />
   </ItemGroup>
 

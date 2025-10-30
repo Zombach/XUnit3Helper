@@ -20,7 +20,7 @@
     <Version>0.0.3-alpha</Version>
     <Authors>ZLoo</Authors>
     <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
-    <PackageTags>xunit, v3, lib</PackageTags>
+    <PackageTags>xunit, v3, lib, test</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
