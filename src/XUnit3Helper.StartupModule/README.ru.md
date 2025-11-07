@@ -1,5 +1,3 @@
-# XUnit3Helper.StartupModule
-
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Zombach/XUnit3Helper/blob/master/src/XUnit3Helper.StartupModule/README.md)
 [![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/Zombach/XUnit3Helper/blob/master/src/XUnit3Helper.StartupModule/README.ru.md)
 
