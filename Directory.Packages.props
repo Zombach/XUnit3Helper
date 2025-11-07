@@ -10,10 +10,6 @@
     <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.3-alpha" />
   </ItemGroup>
   <ItemGroup>
-    <!-- For non-profit use of version 8 and above, Fluentssertions are free, for a commercial one, a paid license is required. https://github.com/fluentassertions/fluentassertions/blob/main/LICENSE -->
-    <PackageVersion Include="FluentAssertions" Version="[7.2.0, 8)" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-rc.2.25502.107" />
     <PackageVersion Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />

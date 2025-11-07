@@ -1,4 +1,3 @@
-using FluentAssertions;
 using XUnit3Helper.Impl;
 
 namespace XUnit3Helper.Tests.Impl;
@@ -32,9 +31,9 @@ public sealed class JsonFileDataAttributeTests
     [JsonFileData("assets/data.json")]
     public Task JsonFileDataTest(int integer, P2 parameter, P3 expected)
     {
-        integer.Should().Be(expected.Integer);
-        parameter.Text.Should().Be(expected.Text);
-        parameter.Child.Boolean.Should().Be(expected.Child.Boolean);
+        Assert.Equal(expected.Integer, integer);
+        Assert.Equal(expected.Text, parameter.Text);
+        Assert.Equal(expected.Child.Boolean, parameter.Child.Boolean);
 
         return Task.CompletedTask;
     }
@@ -43,9 +42,14 @@ public sealed class JsonFileDataAttributeTests
     [JsonFileData("assets/data-with-section.json", sectionKey: "SectionKey2")]
     public Task JsonFileDataBySectionKeyTest(int integer, P2 parameter, P3 expected)
     {
-        integer.Should().Be(expected.Integer).And.Be(2);
-        parameter.Text.Should().Be(expected.Text).And.Be("2");
-        parameter.Child.Boolean.Should().Be(expected.Child.Boolean).And.Be(true);
+        Assert.Equal(2, expected.Integer);
+        Assert.Equal(expected.Integer, integer);
+
+        Assert.Equal("2", expected.Text);
+        Assert.Equal(expected.Text, parameter.Text);
+
+        Assert.True(expected.Child.Boolean);
+        Assert.Equal(expected.Child.Boolean, parameter.Child.Boolean);
 
         return Task.CompletedTask;
     }
@@ -54,7 +58,7 @@ public sealed class JsonFileDataAttributeTests
     [JsonFileData("assets/simple-type-data.json", simpleTypeJson: true)]
     public Task SimpleTypeJsonFileDataTest(int integer, bool boolean, string text)
     {
-        $"{integer}{boolean}".Should().Be(text);
+        Assert.Equal(text, $"{integer}{boolean}");
 
         return Task.CompletedTask;
     }
@@ -66,8 +70,10 @@ public sealed class JsonFileDataAttributeTests
         sectionKey: "SectionKey2")]
     public Task SimpleTypeJsonFileDataBySectionKeyTest(int integer, bool boolean, string text)
     {
+        Assert.Equal(text, integer is 3 ? "3false" : "4true");
+
         var actual = $"{integer}{boolean}".ToLower();
-        actual.Should().Be(text).And.Be(integer is 3 ? "3false" : "4true");
+        Assert.Equal(text, actual);
 
         return Task.CompletedTask;
     }
