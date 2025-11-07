@@ -42,16 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Serilog.Extensions.Hosting" Version="9.0.1-dev-02307" />
-    <PackageVersion Include="Serilog.Sinks.Console" Version="6.0.1-dev-00953" />
+    <PackageVersion Include="Serilog.Sinks.Console" Version="6.1.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="coverlet.msbuild" Version="6.0.4" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="xunit.v3" Version="3.1.0" />
+    <PackageVersion Include="xunit.v3" Version="3.2.0" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
-    <PackageVersion Include="xunit.analyzers" Version="1.24.0" />
-    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.1.0" />
+    <PackageVersion Include="xunit.analyzers" Version="1.25.0" />
+    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.0" />
   </ItemGroup>
 </Project>

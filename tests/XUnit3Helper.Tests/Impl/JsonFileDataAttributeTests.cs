@@ -5,6 +5,29 @@ namespace XUnit3Helper.Tests.Impl;
 
 public sealed class JsonFileDataAttributeTests
 {
+    public sealed class P2
+    {
+        public sealed class P2Child
+        {
+            public bool Boolean { get; set; }
+        }
+
+        public string Text { get; set; }
+        public P2Child Child { get; set; }
+    }
+
+    public sealed class P3
+    {
+        public sealed class P3Child
+        {
+            public bool Boolean { get; set; }
+        }
+
+        public int Integer { get; set; }
+        public string Text { get; set; }
+        public P3Child Child { get; set; }
+    }
+
     [Theory]
     [JsonFileData("assets/data.json")]
     public Task JsonFileDataTest(int integer, P2 parameter, P3 expected)
@@ -47,28 +70,5 @@ public sealed class JsonFileDataAttributeTests
         actual.Should().Be(text).And.Be(integer is 3 ? "3false" : "4true");
 
         return Task.CompletedTask;
-    }
-
-    public sealed class P2
-    {
-        public sealed class P2Child
-        {
-            public bool Boolean { get; set; }
-        }
-
-        public string Text { get; set; }
-        public P2Child Child { get; set; }
-    }
-
-    public sealed class P3
-    {
-        public sealed class P3Child
-        {
-            public bool Boolean { get; set; }
-        }
-
-        public int Integer { get; set; }
-        public string Text { get; set; }
-        public P3Child Child { get; set; }
     }
 }
