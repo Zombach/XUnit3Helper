@@ -3,10 +3,9 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Zombach/XUnit3Helper/blob/master/src/XUnit3Helper.StartupModule/README.md)
 [![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/Zombach/XUnit3Helper/blob/master/src/XUnit3Helper.StartupModule/README.ru.md)
 
-This package is required by the [XUnit3Helper.Integration](https://www.nuget.org/packages/XUnit3Helper.Integration/0.0.4-alpha).
-It contains an abstract startup module which you should use as a base for implementing your Web API.
+Данный пакет необходим для [XUnit3Helper.Integration](https://www.nuget.org/packages/XUnit3Helper.Integration/0.0.3-alpha).
+Содержит абстрактный модуль на базе которого необходимо реализовать ваше WebApi
 
-Example — concise constructor syntax:
 ```csharp
     public sealed class Startup(
         IWebHostEnvironment environment,
@@ -16,7 +15,8 @@ Example — concise constructor syntax:
     }
 ```
 
-Or using an explicit constructor that calls the base:
+или
+
 ```csharp
     public sealed class Startup
         : BaseStartupModule
@@ -30,40 +30,40 @@ Or using an explicit constructor that calls the base:
     }
 ```
 
-You must also implement these methods:
+Так же необходимо реализовать данные методы:
 
-- ConfigureConfigurationInternal
+  - ConfigureConfigurationInternal
 ```csharp
     protected abstract IConfiguration ConfigureConfigurationInternal(
         IWebHostEnvironment environment,
         ConfigurationManager configurationManager);
 ```
 
-Example:
+Например:
 ```csharp
     protected override IConfiguration ConfigureConfigurationInternal(
         IWebHostEnvironment environment,
         ConfigurationManager configurationManager)
     {
         return configurationManager
-            //Set the application content root path
+            //Устанавливаем путь приложения
             .SetBasePath(environment.ContentRootPath)
-             //Add appsettings file
+             //Добавляем файл appsettings.json
             .AddJsonFile("appsettings.json")
-             //Add environment-specific appsettings file (optional)
+             //Добавляем файл appsettings.Environment.json, зависящий от environment.EnvironmentName
             .AddJsonFile($"appsettings.{environment.EnvironmentName}.json", true)
-             //Add environment variables
+             //Добавляем переменные окружения
             .AddEnvironmentVariables()
             .Build();
     }
 ```
 
-- ConfigureServices
+  - ConfigureServices
 ```csharp
     public override IServiceCollection ConfigureServices(IServiceCollection services);
 ```
 
-Example:
+Например:
 ```csharp
     public override IServiceCollection ConfigureServices(IServiceCollection services)
     {
@@ -77,12 +77,12 @@ Example:
     }
 ```
 
-- Configure
+  - Configure
 ```csharp
     public override IApplicationBuilder Configure(IApplicationBuilder app);
 ```
 
-Example:
+Например:
 ```csharp
     public override IApplicationBuilder Configure(IApplicationBuilder app)
     {
@@ -109,7 +109,7 @@ Example:
     }
 ```
 
-As a result, your `Program.cs` will look like this:
+В результате ваш Program.cs будет выглядеть следующим образом:
 ```csharp
     var builder = WebApplication.CreateBuilder(args);
 

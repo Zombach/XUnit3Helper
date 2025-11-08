@@ -10,10 +10,6 @@
     <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.3-alpha" />
   </ItemGroup>
   <ItemGroup>
-    <!-- For non-profit use of version 8 and above, Fluentssertions are free, for a commercial one, a paid license is required. https://github.com/fluentassertions/fluentassertions/blob/main/LICENSE -->
-    <PackageVersion Include="FluentAssertions" Version="[7.2.0, 8)" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-rc.2.25502.107" />
     <PackageVersion Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
@@ -42,16 +38,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Serilog.Extensions.Hosting" Version="9.0.1-dev-02307" />
-    <PackageVersion Include="Serilog.Sinks.Console" Version="6.0.1-dev-00953" />
+    <PackageVersion Include="Serilog.Sinks.Console" Version="6.1.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="coverlet.msbuild" Version="6.0.4" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="xunit.v3" Version="3.1.0" />
+    <PackageVersion Include="xunit.v3" Version="3.2.0" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
-    <PackageVersion Include="xunit.analyzers" Version="1.24.0" />
-    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.1.0" />
+    <PackageVersion Include="xunit.analyzers" Version="1.25.0" />
+    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.0" />
   </ItemGroup>
 </Project>

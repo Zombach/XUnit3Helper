@@ -1,1 +1,5 @@
 #nullable enable
+XUnit3Helper.StartupModule.IStartupModule
+XUnit3Helper.StartupModule.IStartupModule.Configuration.get -> Microsoft.Extensions.Configuration.IConfiguration!
+XUnit3Helper.StartupModule.IStartupModule.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder! app) -> Microsoft.AspNetCore.Builder.IApplicationBuilder!
+XUnit3Helper.StartupModule.IStartupModule.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!

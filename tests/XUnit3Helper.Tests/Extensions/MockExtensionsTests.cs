@@ -1,4 +1,3 @@
-using FluentAssertions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,8 +13,7 @@ public sealed class MockExtensionsTests
     public void AddMock_EmptyTypes(ServiceCollection services)
     {
         services.AddMocks();
-
-        services.Count.Should().Be(0);
+        Assert.Empty(services);
     }
 
     [Theory, CustomAutoData]
@@ -28,7 +26,7 @@ public sealed class MockExtensionsTests
         _ = serviceProvider.GetRequiredService<Mock<IClientProxy>>();
         _ = serviceProvider.GetRequiredService<IClientProxy>();
 
-        services.Count.Should().Be(2);
+        Assert.Equal(2, services.Count);
     }
 
     [Theory, CustomAutoData]
@@ -43,7 +41,7 @@ public sealed class MockExtensionsTests
         var current = currentServiceProvider.GetRequiredService<IHttpContextAccessor>();
         var currentMock = currentServiceProvider.GetRequiredService<Mock<IHttpContextAccessor>>();
 
-        current.Should().NotBe(httpContextAccessor);
-        currentMock.Object.Should().Be(current);
+        Assert.NotEqual(current, httpContextAccessor);
+        Assert.Same(currentMock.Object, current);
     }
 }

@@ -30,6 +30,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\XUnit3Helper.StartupModule\XUnit3Helper.StartupModule.csproj" />
+    <ProjectReference Include="..\..\src\XUnit3Helper\XUnit3Helper.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="assets\appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\appsettings.test.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
