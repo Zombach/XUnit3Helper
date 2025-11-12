@@ -1,6 +1,5 @@
 using System.Net;
 using System.Net.Http.Json;
-using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using Refit;
@@ -28,15 +27,15 @@ public sealed class JsonPlaceHolderControllerTests(MockWebApplicationFactory app
 
         const string url = "JsonPlaceHolder/posts/";
         var response = await client.GetAsync(url + id, TestContext.Current.CancellationToken);
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
         var data = await response.Content
             .ReadFromJsonAsync<JsonPlaceHolderResponse>(TestContext.Current.CancellationToken);
 
-        data.Should().NotBeNull();
-        data.UserId.Should().Be(jsonPlaceHolderResponse.UserId);
-        data.Id.Should().Be(jsonPlaceHolderResponse.Id);
-        data.Title.Should().Be(jsonPlaceHolderResponse.Title);
-        data.Body.Should().Be(jsonPlaceHolderResponse.Body);
+        Assert.NotNull(data);
+        Assert.Equal(jsonPlaceHolderResponse.Id, data.Id);
+        Assert.Equal(jsonPlaceHolderResponse.UserId, data.UserId);
+        Assert.Equal(jsonPlaceHolderResponse.Title, data.Title);
+        Assert.Equal(jsonPlaceHolderResponse.Body, data.Body);
     }
 }

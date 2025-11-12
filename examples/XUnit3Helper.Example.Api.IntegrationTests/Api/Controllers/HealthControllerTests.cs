@@ -1,5 +1,4 @@
 using System.Net;
-using FluentAssertions;
 using XUnit3Helper.Integration;
 
 namespace XUnit3Helper.Example.Api.IntegrationTests.Api.Controllers;
@@ -14,6 +13,6 @@ public sealed class HealthControllerTests(MockWebApplicationFactory applicationF
         using var client = CreateClient();
 
         var response = await client.GetAsync(url, TestContext.Current.CancellationToken);
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
 }
