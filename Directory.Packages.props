@@ -5,19 +5,19 @@
   <ItemGroup>
     <PackageVersion Include="AutoFixture.AutoMoq" Version="5.0.0-preview0012" />
     <PackageVersion Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
-    <PackageVersion Include="XUnit3Helper" Version="0.0.3-alpha" />
-    <PackageVersion Include="XUnit3Helper.Integration" Version="0.0.3-alpha" />
-    <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.3-alpha" />
+    <PackageVersion Include="XUnit3Helper" Version="0.0.4-alpha" />
+    <PackageVersion Include="XUnit3Helper.Integration" Version="0.0.4-alpha" />
+    <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.4-alpha" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-rc.2.25502.107" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.6" />
-    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.6" />
-    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.6" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="10.0.1" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.0.1" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.0.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Refit" Version="8.0.0" />
@@ -27,8 +27,8 @@
     <PackageVersion Include="ErrorOr" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Mediator.Abstractions" Version="3.1.0-preview.4" />
-    <PackageVersion Include="Mediator.SourceGenerator" Version="3.1.0-preview.4" />
+    <PackageVersion Include="Mediator.Abstractions" Version="3.1.0-preview.5" />
+    <PackageVersion Include="Mediator.SourceGenerator" Version="3.1.0-preview.5" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Moq" Version="4.20.72" />
