@@ -13,14 +13,14 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - name: Restore dependencies
+        run: dotnet restore
 
-      - name: Install dependencies
-        run: npm install
+      - name: Build
+        run: dotnet build --no-restore /p:ContinuousIntegrationBuild=true
 
-      - name: Run tests
-        run: npx jest --coverage
+      - name: Test
+        run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v5
