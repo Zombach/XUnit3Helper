@@ -28,11 +28,11 @@
     <File Path="README.ru.md" />
   </Folder>
   <Folder Name="/_items-solution/.github/">
-    <File Path=".github/codecov.yml" />
     <File Path=".github/dependabot.yml" />
     <File Path=".github/pull_request_template.md" />
   </Folder>
   <Folder Name="/_items-solution/.github/workflows/">
+    <File Path=".github/workflows/codecov.yml" />
     <File Path=".github/workflows/release.yml" />
   </Folder>
 </Solution>
