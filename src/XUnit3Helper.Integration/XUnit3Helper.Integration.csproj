@@ -17,7 +17,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PakageId>XUnit3Helper.Integration</PakageId>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>0.0.4-alpha</Version>
+    <Version>0.0.5-alpha</Version>
     <Authors>ZLoo</Authors>
     <RepositoryUrl>https://github.com/Zombach/XUnit3Helper</RepositoryUrl>
     <PackageTags>xunit, v3, lib, test</PackageTags>
