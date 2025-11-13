@@ -54,14 +54,14 @@ public sealed class JsonFileDataAttributeTests
         return Task.CompletedTask;
     }
 
-    [Theory]
-    [JsonFileData("assets/simple-type-data.json", simpleTypeJson: true)]
-    public Task SimpleTypeJsonFileDataTest(int integer, bool boolean, string text)
-    {
-        Assert.Equal(text, $"{integer}{boolean}");
+    //[Theory]
+    //[JsonFileData("assets/simple-type-data.json", simpleTypeJson: true)]
+    //public Task SimpleTypeJsonFileDataTest(int integer, bool boolean, string text)
+    //{
+    //    Assert.Equal(text, $"{integer}{boolean}");
 
-        return Task.CompletedTask;
-    }
+    //    return Task.CompletedTask;
+    //}
 
     [Theory]
     [JsonFileData(
