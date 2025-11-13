@@ -5,9 +5,9 @@
   <ItemGroup>
     <PackageVersion Include="AutoFixture.AutoMoq" Version="5.0.0-preview0012" />
     <PackageVersion Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
-    <PackageVersion Include="XUnit3Helper" Version="0.0.4-alpha" />
-    <PackageVersion Include="XUnit3Helper.Integration" Version="0.0.4-alpha" />
-    <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.4-alpha" />
+    <PackageVersion Include="XUnit3Helper" Version="0.0.5-alpha" />
+    <PackageVersion Include="XUnit3Helper.Integration" Version="0.0.5-alpha" />
+    <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.5-alpha" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0" />
