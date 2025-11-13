@@ -25,6 +25,7 @@
     <File Path="LICENSE.txt" />
     <File Path="NuGet.config" />
     <File Path="README.md" />
+    <File Path="README.ru.md" />
   </Folder>
   <Folder Name="/_items-solution/.github/">
     <File Path=".github/dependabot.yml" />

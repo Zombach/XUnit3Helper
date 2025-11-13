@@ -1,6 +1,38 @@
 #nullable enable
+abstract XUnit3Helper.Models.BaseTestData.GetObjects() -> object?[]!
+abstract XUnit3Helper.Models.BaseTestData.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
 override XUnit3Helper.Impl.JsonFileDataAttribute.GetData(System.Reflection.MethodInfo! testMethod, Xunit.Sdk.DisposalTracker! disposalTracker) -> System.Threading.Tasks.ValueTask<System.Collections.Generic.IReadOnlyCollection<Xunit.ITheoryDataRow!>!>
 override XUnit3Helper.Impl.JsonFileDataAttribute.SupportsDiscoveryEnumeration() -> bool
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2, TP3>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1, TP2>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1, TP2>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
+override XUnit3Helper.Models.TestData<TP1>.GetObjects() -> object?[]!
+override XUnit3Helper.Models.TestData<TP1>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
 static XUnit3Helper.Extensions.MockExtension.AddMocks(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, params System.Type![]! types) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
 XUnit3Helper.Extensions.MockExtension
 XUnit3Helper.Impl.CustomAutoDataAttribute
@@ -8,8 +40,8 @@ XUnit3Helper.Impl.CustomAutoDataAttribute.CustomAutoDataAttribute() -> void
 XUnit3Helper.Impl.CustomAutoDataAttribute.CustomAutoDataAttribute(System.Func<AutoFixture.IFixture!>! fixtureFactory) -> void
 XUnit3Helper.Impl.JsonFileDataAttribute
 XUnit3Helper.Impl.JsonFileDataAttribute.JsonFileDataAttribute(string! filePath, bool simpleTypeJson = false, string? sectionKey = null) -> void
-XUnit3Helper.Models.TestData
-XUnit3Helper.Models.TestData.TestData() -> void
+XUnit3Helper.Models.BaseTestData
+XUnit3Helper.Models.BaseTestData.BaseTestData() -> void
 XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15>
 XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15>.P1.get -> TP1
 XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15>.P1.init -> void
