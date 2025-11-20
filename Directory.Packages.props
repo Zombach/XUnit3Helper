@@ -27,8 +27,8 @@
     <PackageVersion Include="ErrorOr" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Mediator.Abstractions" Version="3.1.0-preview.5" />
-    <PackageVersion Include="Mediator.SourceGenerator" Version="3.1.0-preview.5" />
+    <PackageVersion Include="Mediator.Abstractions" Version="3.1.0-preview.14" />
+    <PackageVersion Include="Mediator.SourceGenerator" Version="3.1.0-preview.14" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Moq" Version="4.20.72" />
