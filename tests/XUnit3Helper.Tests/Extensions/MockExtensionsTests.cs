@@ -22,11 +22,12 @@ public sealed class MockExtensionsTests
         services.AddMocks(typeof(IClientProxy));
 
         using var serviceProvider = services.BuildServiceProvider();
-
-        _ = serviceProvider.GetRequiredService<Mock<IClientProxy>>();
-        _ = serviceProvider.GetRequiredService<IClientProxy>();
-
         Assert.Equal(2, services.Count);
+
+        var clientProxyMock = serviceProvider.GetRequiredService<Mock<IClientProxy>>();
+        var clientProxy = serviceProvider.GetRequiredService<IClientProxy>();
+
+        Assert.Same(clientProxyMock.Object, clientProxy);
     }
 
     [Theory, CustomAutoData]
