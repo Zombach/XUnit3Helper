@@ -21,7 +21,7 @@ public sealed class JsonFileDataAttribute(
 
         var parameters = testMethod.GetParameters();
         var parameterTypes = parameters.Select(x => x.ParameterType).ToArray();
-        if (parameterTypes.Length is 0 || simpleTypeJson && parameterTypes.Length > 15)
+        if (parameterTypes.Length is 0 || (!simpleTypeJson && parameterTypes.Length > 15))
         {
             throw new ArgumentException($"parameterTypes should be > 0 and < 15: {parameterTypes}");
         }
