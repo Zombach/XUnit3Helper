@@ -18,7 +18,7 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1>(testData.P1));
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?>(testData.P1));
     }
 
     public static IEnumerable<ITheoryDataRow> GenerateTestData<TP1, TP2>(string fileData)
@@ -29,7 +29,7 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?>(
             testData.P1, testData.P2));
     }
 
@@ -41,7 +41,7 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?>(
             testData.P1, testData.P2, testData.P3));
     }
 
@@ -53,7 +53,7 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?>(
             testData.P1, testData.P2, testData.P3, testData.P4));
     }
 
@@ -65,7 +65,7 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5));
     }
 
@@ -79,8 +79,8 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6));
     }
@@ -95,8 +95,8 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6, TP7>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?, TP7?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6, testData.P7));
     }
@@ -111,8 +111,8 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6, TP7, TP8>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?, TP7?, TP8?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6, testData.P7, testData.P8));
     }
@@ -127,8 +127,8 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6, TP7, TP8, TP9>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?, TP7?, TP8?, TP9?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6, testData.P7, testData.P8, testData.P9));
     }
@@ -143,8 +143,8 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6, TP7, TP8, TP9, TP10>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?, TP7?, TP8?, TP9?, TP10?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6, testData.P7, testData.P8, testData.P9, testData.P10));
     }
@@ -161,9 +161,9 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6, TP7, TP8, TP9, TP10,
-            TP11>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?, TP7?, TP8?, TP9?, TP10?,
+            TP11?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
             testData.P11));
@@ -181,9 +181,9 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6, TP7, TP8, TP9, TP10,
-            TP11, TP12>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?, TP7?, TP8?, TP9?, TP10?,
+            TP11?, TP12?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
             testData.P11, testData.P12));
@@ -201,9 +201,9 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6, TP7, TP8, TP9, TP10,
-            TP11, TP12, TP13>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?, TP7?, TP8?, TP9?, TP10?,
+            TP11?, TP12?, TP13?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
             testData.P11, testData.P12, testData.P13));
@@ -221,9 +221,9 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6, TP7, TP8, TP9, TP10,
-            TP11, TP12, TP13, TP14>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?, TP7?, TP8?, TP9?, TP10?,
+            TP11?, TP12?, TP13?, TP14?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
             testData.P11, testData.P12, testData.P13, testData.P14));
@@ -241,9 +241,9 @@ internal static class GenerateTestDataExtension
 
         ArgumentNullException.ThrowIfNull(testDataCollection);
 
-        return testDataCollection.Select(testData => new TheoryDataRow<TP1, TP2, TP3, TP4, TP5,
-            TP6, TP7, TP8, TP9, TP10,
-            TP11, TP12, TP13, TP14, TP15>(
+        return testDataCollection.Select(testData => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+            TP6?, TP7?, TP8?, TP9?, TP10?,
+            TP11?, TP12?, TP13?, TP14?, TP15?>(
             testData.P1, testData.P2, testData.P3, testData.P4, testData.P5,
             testData.P6, testData.P7, testData.P8, testData.P9, testData.P10,
             testData.P11, testData.P12, testData.P13, testData.P14, testData.P15));
