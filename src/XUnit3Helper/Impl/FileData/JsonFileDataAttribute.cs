@@ -1,55 +1,59 @@
 using System.Reflection;
 using System.Text.Json;
-using Xunit.Internal;
-using Xunit.Sdk;
-using Xunit.v3;
 using XUnit3Helper.Extensions;
+using XUnit3Helper.Impl.FileData.Common;
 
-namespace XUnit3Helper.Impl;
+namespace XUnit3Helper.Impl.FileData;
 
 public sealed class JsonFileDataAttribute(
     string filePath,
-    bool simpleTypeJson = false,
+    bool simpleType = false,
     string? sectionKey = null)
-    : DataAttribute
+    : BaseFileDataAttribute(filePath)
 {
-    public override ValueTask<IReadOnlyCollection<ITheoryDataRow>> GetData(
-        MethodInfo testMethod,
-        DisposalTracker disposalTracker)
+    protected override void CheckParameters(Type[] parameterTypes)
     {
-        ArgumentNullException.ThrowIfNull(testMethod);
-
-        var parameters = testMethod.GetParameters();
-        var parameterTypes = parameters.Select(x => x.ParameterType).ToArray();
-        if (parameterTypes.Length is 0 || (!simpleTypeJson && parameterTypes.Length > 15))
+        if (!simpleType && parameterTypes.Length > 15)
         {
-            throw new ArgumentException($"parameterTypes should be > 0 and < 15: {parameterTypes}");
+            throw new ArgumentException($"SimpleType parameterTypes must be > 0 and < 15: {parameterTypes}");
         }
 
-        var jsonPath = Path.IsPathRooted(filePath)
-            ? filePath
-            : Path.GetRelativePath(Directory.GetCurrentDirectory(), filePath);
+        base.CheckParameters(parameterTypes);
+    }
 
-        if (!File.Exists(jsonPath))
+    protected override async ValueTask<IEnumerable<string>> GetSource(string path)
+    {
+        if (!File.Exists(path))
         {
-            throw new ArgumentException($"Could not find file at path: {jsonPath}");
+            throw new ArgumentException($"Could not find file at path: {path}");
         }
 
-        var fileData = File.ReadAllText(jsonPath);
+        var fileData = await File.ReadAllTextAsync(path);
+        if (string.IsNullOrEmpty(fileData))
+        {
+            throw new ArgumentException($"File must not be empty: {path}");
+        }
 
         if (!string.IsNullOrEmpty(sectionKey))
         {
             fileData = GetSectionData(fileData, sectionKey);
         }
 
-        var theoryDataRows = simpleTypeJson
+        return [fileData];
+    }
+
+    protected override IEnumerable<ITheoryDataRow> GetTeoryDataRow(
+        IEnumerable<string> source,
+        Type[] parameterTypes)
+    {
+        var fileData = source.First();
+
+        var theoryDataRows = simpleType
             ? CreateSimpleTheoryDataRows(fileData, parameterTypes)
             : CreateTheoryDataRows(fileData, parameterTypes);
 
-        return ValueTask.FromResult(theoryDataRows.CastOrToReadOnlyCollection());
+        return theoryDataRows;
     }
-
-    public override bool SupportsDiscoveryEnumeration() => true;
 
     private static IEnumerable<ITheoryDataRow> CreateSimpleTheoryDataRows(
         string fileData,
