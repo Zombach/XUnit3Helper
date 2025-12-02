@@ -1,6 +1,6 @@
-using XUnit3Helper.Impl;
+using XUnit3Helper.Impl.FileData;
 
-namespace XUnit3Helper.Tests.Impl;
+namespace XUnit3Helper.Tests.Impl.FileData;
 
 public sealed class JsonFileDataAttributeTests
 {
@@ -28,19 +28,19 @@ public sealed class JsonFileDataAttributeTests
     }
 
     [Theory]
-    [JsonFileData("assets/data.json")]
-    public Task JsonFileDataTest(int integer, P2 parameter, P3 expected)
+    [JsonFileData("assets/json/data.json")]
+    public ValueTask JsonFileDataTest(int integer, P2 parameter, P3 expected)
     {
         Assert.Equal(expected.Integer, integer);
         Assert.Equal(expected.Text, parameter.Text);
         Assert.Equal(expected.Child.Boolean, parameter.Child.Boolean);
 
-        return Task.CompletedTask;
+        return ValueTask.CompletedTask;
     }
 
     [Theory]
-    [JsonFileData("assets/data-with-section.json", sectionKey: "SectionKey2")]
-    public Task JsonFileDataBySectionKeyTest(int integer, P2 parameter, P3 expected)
+    [JsonFileData("assets/json/data-with-section.json", sectionKey: "SectionKey2")]
+    public ValueTask JsonFileDataBySectionKeyTest(int integer, P2 parameter, P3 expected)
     {
         Assert.Equal(2, expected.Integer);
         Assert.Equal(expected.Integer, integer);
@@ -51,30 +51,30 @@ public sealed class JsonFileDataAttributeTests
         Assert.True(expected.Child.Boolean);
         Assert.Equal(expected.Child.Boolean, parameter.Child.Boolean);
 
-        return Task.CompletedTask;
+        return ValueTask.CompletedTask;
     }
 
     [Theory]
-    [JsonFileData("assets/simple-type-data.json", simpleTypeJson: true)]
-    public Task SimpleTypeJsonFileDataTest(int integer, bool boolean, string text)
+    [JsonFileData("assets/json/simple-type-data.json", simpleType: true)]
+    public ValueTask SimpleTypeJsonFileDataTest(int integer, bool boolean, string text)
     {
         Assert.Equal(text, $"{integer}{boolean}");
 
-        return Task.CompletedTask;
+        return ValueTask.CompletedTask;
     }
 
     [Theory]
     [JsonFileData(
-        "assets/simple-type-data-with-section.json",
-        simpleTypeJson: true,
+        "assets/json/simple-type-data-with-section.json",
+        simpleType: true,
         sectionKey: "SectionKey2")]
-    public Task SimpleTypeJsonFileDataBySectionKeyTest(int integer, bool boolean, string text)
+    public ValueTask SimpleTypeJsonFileDataBySectionKeyTest(int integer, bool boolean, string text)
     {
         Assert.Equal(text, integer is 3 ? "3false" : "4true");
 
         var actual = $"{integer}{boolean}".ToLower();
         Assert.Equal(text, actual);
 
-        return Task.CompletedTask;
+        return ValueTask.CompletedTask;
     }
 }

@@ -34,16 +34,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="assets\data-with-section.json">
+    <None Update="assets\cvs\data2.cvs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="assets\simple-type-data-with-section.json">
+    <None Update="assets\cvs\data.cvs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="assets\simple-type-data.json">
+    <None Update="assets\json\data-with-section.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="assets\data.json">
+    <None Update="assets\json\simple-type-data-with-section.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\json\simple-type-data.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\json\data.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
