@@ -15,9 +15,9 @@
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="10.0.1" />
-    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.0.1" />
-    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.0.1" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="10.1.0" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.1.0" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Refit" Version="9.0.2" />
