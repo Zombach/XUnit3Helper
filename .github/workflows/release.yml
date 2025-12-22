@@ -212,7 +212,7 @@ jobs:
         run: dotnet pack .\src\XUnit3Helper.StartupModule --configuration Release --output ${{ env.NuGetDirectory }}
         
       # Загрузка артефакта в хранилище для доступа к нему из других джоб
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         with:
           name: nuget
           if-no-files-found: error
