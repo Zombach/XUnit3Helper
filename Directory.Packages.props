@@ -10,7 +10,7 @@
     <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.5-alpha" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.2" />
     <PackageVersion Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
   </ItemGroup>
@@ -34,7 +34,7 @@
     <PackageVersion Include="Moq" Version="4.20.72" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Riok.Mapperly" Version="4.3.1-next.0" />
+    <PackageVersion Include="Riok.Mapperly" Version="4.3.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Serilog.Extensions.Hosting" Version="10.0.0" />
@@ -45,9 +45,9 @@
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="xunit.v3" Version="3.2.1" />
+    <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
-    <PackageVersion Include="xunit.analyzers" Version="1.26.0" />
-    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.1" />
+    <PackageVersion Include="xunit.analyzers" Version="1.27.0" />
+    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.2" />
   </ItemGroup>
 </Project>
