@@ -12,12 +12,12 @@
   <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.3" />
     <PackageVersion Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="10.1.2" />
-    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.1.2" />
-    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.2" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="10.1.4" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.1.4" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.4" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Refit" Version="10.0.1" />
@@ -41,8 +41,8 @@
     <PackageVersion Include="Serilog.Sinks.Console" Version="6.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="coverlet.msbuild" Version="6.0.4" />
-    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+    <PackageVersion Include="coverlet.msbuild" Version="8.0.0" />
+    <PackageVersion Include="coverlet.collector" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
