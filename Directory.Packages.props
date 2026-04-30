@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.5" />
     <PackageVersion Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.5.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="10.1.7" />
