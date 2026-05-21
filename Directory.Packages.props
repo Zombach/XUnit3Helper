@@ -10,7 +10,7 @@
     <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.5-alpha" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.7" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.8" />
     <PackageVersion Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="5.0.0-1.25277.114" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.5.1" />
   </ItemGroup>
@@ -24,7 +24,7 @@
     <PackageVersion Include="Refit.HttpClientFactory" Version="10.1.6" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="ErrorOr" Version="2.0.1" />
+    <PackageVersion Include="ErrorOr" Version="2.1.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Mediator.Abstractions" Version="3.1.0-rc.1" />
@@ -41,8 +41,8 @@
     <PackageVersion Include="Serilog.Sinks.Console" Version="6.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="coverlet.msbuild" Version="10.0.0" />
-    <PackageVersion Include="coverlet.collector" Version="10.0.0" />
+    <PackageVersion Include="coverlet.msbuild" Version="10.0.1" />
+    <PackageVersion Include="coverlet.collector" Version="10.0.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
