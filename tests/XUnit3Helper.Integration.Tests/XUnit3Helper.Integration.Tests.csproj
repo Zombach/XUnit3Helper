@@ -32,4 +32,13 @@
     <ProjectReference Include="..\..\src\XUnit3Helper.Integration\XUnit3Helper.Integration.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="assets\appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\appsettings.test.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
