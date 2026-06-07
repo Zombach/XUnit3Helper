@@ -28,7 +28,6 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '11.x'
-          cache: true
 
       - name: Run Tests
         shell: pwsh
@@ -185,7 +184,6 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '11.x'
-          cache: true
 
       # Сборка и упаковка пакета
       - name: Pack XUnit3Helper
@@ -234,7 +232,6 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '11.x'
-          cache: true
 
       # С помощью dotnet утилиты nuget публикуе пакет
       - name: Publish NuGet package
