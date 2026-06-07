@@ -12,8 +12,8 @@ concurrency:
   group: release-master
   cancel-in-progress: false
 
-permissions:
-  contents: write
+# permissions:
+#   contents: write
 
 jobs:
   # 2. Добавление проверки прохождения тестов
