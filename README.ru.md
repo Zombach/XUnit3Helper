@@ -11,7 +11,7 @@
 - Атрибут `CustomAutoDataAttribute` — готовая конфигурация `AutoFixture` + `AutoMoq` (включая конфигурацию `ConfigureMembers` и поведение рекурсий).
 - Расширение `MockExtension.AddMocks` — массовая регистрация моков `Moq` в `IServiceCollection`.
 - Вспомогательный генератор `GenerateTestDataExtension` и модель `TestData` — поддержка десериализации JSON в наборы параметров до 15 аргументов.
-- Поддерживаемые таргеты: `net8.0`, `net9.0`, `net10.0`.
+- Поддерживаемые таргеты: `net10.0`, `net11.0`.
 
 ## Использование
 1) `JsonFileDataAttribute`
