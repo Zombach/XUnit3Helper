@@ -42,24 +42,24 @@ public sealed class Startup(
         return services;
     }
 
-    public override IApplicationBuilder Configure(IApplicationBuilder app)
+    public override IApplicationBuilder Configure(IApplicationBuilder application)
     {
-        app.UseRouting();
+        application.UseRouting();
 
-        app.UseCors(policy => policy
+        application.UseCors(policy => policy
             .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod());
 
-        app.UseSwagger();
-        app.UseSwaggerUI();
+        application.UseSwagger();
+        application.UseSwaggerUI();
 
-        app.UseHttpsRedirection();
-        app.UseAuthorization();
-        app.UseAuthorization();
+        application.UseHttpsRedirection();
+        application.UseAuthorization();
+        application.UseAuthorization();
 
-        app.UseEndpoints(configure => configure.MapControllers());
+        application.UseEndpoints(configure => configure.MapControllers());
 
-        return app;
+        return application;
     }
 }
