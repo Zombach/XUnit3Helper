@@ -24,11 +24,11 @@ jobs:
 
       - name: Run Tests
         shell: pwsh
-        run: dotnet test --configuration Release .\tests\XUnit3Helper.Tests
+        run: dotnet test ./tests/XUnit3Helper.Tests/XUnit3Helper.Tests.csproj --configuration Release
 
       - name: Run IntegrationTests
         shell: pwsh
-        run: dotnet test --configuration Release .\tests\XUnit3Helper.Integration.Tests
+        run: dotnet test ./tests/XUnit3Helper.Integration.Tests/XUnit3Helper.Integration.Tests.csproj --configuration Release
   
   # 3. Добавление проверки текущей версии проекта
   check_version:
@@ -199,17 +199,17 @@ jobs:
       # Сборка и упаковка пакета
       - name: Pack XUnit3Helper
         shell: pwsh
-        run: dotnet pack .\src\XUnit3Helper --configuration Release --output ${{ env.NuGetDirectory }}
+        run: dotnet pack ./src/XUnit3Helper/XUnit3Helper.csproj --configuration Release --output ${{ env.NuGetDirectory }}
 
         # Сборка и упаковка пакета
       - name: Pack XUnit3Helper.Integration
         shell: pwsh
-        run: dotnet pack .\src\XUnit3Helper.Integration --configuration Release --output ${{ env.NuGetDirectory }}
+        run: dotnet pack ./src/XUnit3Helper.Integration/XUnit3Helper.Integration.csproj --configuration Release --output ${{ env.NuGetDirectory }}
 
         # Сборка и упаковка пакета
       - name: Pack XUnit3Helper.StartupModule
         shell: pwsh
-        run: dotnet pack .\src\XUnit3Helper.StartupModule --configuration Release --output ${{ env.NuGetDirectory }}
+        run: dotnet pack ./src/XUnit3Helper.StartupModule/XUnit3Helper.StartupModule.csproj --configuration Release --output ${{ env.NuGetDirectory }}
         
       # Загрузка артефакта в хранилище для доступа к нему из других джоб
       - uses: actions/upload-artifact@v7
