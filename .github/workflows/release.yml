@@ -28,7 +28,6 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '11.x'
-          cache: true
 
       - name: restore
         run: dotnet restore
@@ -186,7 +185,6 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '11.x'
-          cache: true
 
       # Сборка и упаковка пакета
       - name: restore
@@ -238,7 +236,6 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '11.x'
-          cache: true
 
       # С помощью dotnet утилиты nuget публикуе пакет
       - name: Publish NuGet package
