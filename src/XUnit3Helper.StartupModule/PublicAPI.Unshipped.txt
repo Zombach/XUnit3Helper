@@ -1,7 +1,1 @@
 #nullable enable
-abstract XUnit3Helper.StartupModule.BaseStartupModule.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder! app) -> Microsoft.AspNetCore.Builder.IApplicationBuilder!
-abstract XUnit3Helper.StartupModule.BaseStartupModule.ConfigureConfigurationInternal(Microsoft.AspNetCore.Hosting.IWebHostEnvironment! environment, Microsoft.Extensions.Configuration.ConfigurationManager! configurationManager) -> Microsoft.Extensions.Configuration.IConfiguration!
-abstract XUnit3Helper.StartupModule.BaseStartupModule.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
-XUnit3Helper.StartupModule.BaseStartupModule
-XUnit3Helper.StartupModule.BaseStartupModule.BaseStartupModule(Microsoft.AspNetCore.Hosting.IWebHostEnvironment! environment, Microsoft.Extensions.Configuration.ConfigurationManager! configurationManager) -> void
-XUnit3Helper.StartupModule.BaseStartupModule.Configuration.get -> Microsoft.Extensions.Configuration.IConfiguration!

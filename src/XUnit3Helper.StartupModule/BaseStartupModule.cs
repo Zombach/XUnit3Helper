@@ -5,16 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace XUnit3Helper.StartupModule;
 
-public abstract class BaseStartupModule
+public abstract class BaseStartupModule(
+    IWebHostEnvironment environment,
+    ConfigurationManager configurationManager)
 {
-    public IConfiguration Configuration { get; }
-
-    protected BaseStartupModule(
-        IWebHostEnvironment environment,
-        ConfigurationManager configurationManager)
-    {
-        Configuration = ConfigureConfigurationInternal(environment, configurationManager);
-    }
+    public IConfiguration Configuration => field ??= ConfigureConfigurationInternal(environment, configurationManager);
 
     protected abstract IConfiguration ConfigureConfigurationInternal(
         IWebHostEnvironment environment,
@@ -22,5 +17,5 @@ public abstract class BaseStartupModule
 
     public abstract IServiceCollection ConfigureServices(IServiceCollection services);
 
-    public abstract IApplicationBuilder Configure(IApplicationBuilder app);
+    public abstract IApplicationBuilder Configure(IApplicationBuilder application);
 }

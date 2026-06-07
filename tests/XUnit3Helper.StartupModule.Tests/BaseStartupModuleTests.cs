@@ -16,7 +16,7 @@ public sealed class BaseStartupModuleTests
         public IFileProvider? ContentRootFileProvider { get; set; }
         public string ContentRootPath { get; set; } = Directory.GetCurrentDirectory();
         public string EnvironmentName { get; set; } = "Test";
-        public IFileProvider? WebRootFileProvider { get; set; }
+        public IFileProvider WebRootFileProvider { get; set; } = null!;
         public string WebRootPath { get; set; } = "wwwroot";
     }
 
@@ -26,6 +26,7 @@ public sealed class BaseStartupModuleTests
         ConfigurationManager configurationManager)
         : BaseStartupModule(environment, configurationManager)
     {
+        public IConfiguration Config => Configuration;
         public bool ConfigureConfigurationCalled { get; private set; }
         public IWebHostEnvironment? ReceivedEnvironment { get; private set; }
         public ConfigurationManager? ReceivedConfigurationManager { get; private set; }
@@ -51,9 +52,9 @@ public sealed class BaseStartupModuleTests
             return services;
         }
 
-        public override IApplicationBuilder Configure(IApplicationBuilder app)
+        public override IApplicationBuilder Configure(IApplicationBuilder application)
         {
-            return app;
+            return application;
         }
     }
 
@@ -73,9 +74,10 @@ public sealed class BaseStartupModuleTests
 
         // Act
         var module = new TestableBaseStartupModule(env, configurationManager);
+        _ = module.Config;
 
         // Assert
-        Assert.True(module.ConfigureConfigurationCalled, "ConfigureConfigurationInternal должен быть вызван в конструкторе");
+        Assert.True(module.ConfigureConfigurationCalled, "ConfigureConfigurationInternal должен быть вызван");
         Assert.Same(env, module.ReceivedEnvironment);
         Assert.Same(configurationManager, module.ReceivedConfigurationManager);
         Assert.EquivalentWithExclusions(expected, module.Configuration, "Providers");

@@ -35,7 +35,7 @@ public abstract class BaseFileDataAttribute(
 
     protected abstract ValueTask<IEnumerable<string>> GetSource(string path);
 
-    protected abstract IEnumerable<ITheoryDataRow> GetTeoryDataRow(
+    protected abstract IEnumerable<ITheoryDataRow> GetTheoryDataRow(
         IEnumerable<string> source,
         Type[] parameterTypes);
 
@@ -51,10 +51,13 @@ public abstract class BaseFileDataAttribute(
         var path = GetPath(filePath);
 
         var source = await GetSource(path);
-        var theoryDataRows = GetTeoryDataRow(source, parameterTypes);
+        var theoryDataRows = GetTheoryDataRow(source, parameterTypes);
 
         return theoryDataRows.CastOrToReadOnlyCollection();
     }
 
-    public override bool SupportsDiscoveryEnumeration() => true;
+    public override bool SupportsDiscoveryEnumeration()
+    {
+        return true;
+    }
 }

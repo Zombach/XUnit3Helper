@@ -9,17 +9,10 @@ public static class MockExtension
 {
     public static IServiceCollection AddMocks(
         this IServiceCollection services,
-#if NET10_0
         params IEnumerable<Type> types)
-#else
-        params Type[] types)
-#endif
     {
-#if NET10_0
         using var enumerator = types.GetEnumerator();
-#else
-        var enumerator = types.GetEnumerator();
-#endif
+
         if (enumerator.MoveNext())
         {
             var methodeInfo = typeof(MockExtension).GetMethod(
@@ -31,13 +24,7 @@ public static class MockExtension
 
             do
             {
-                var genericMethodInfo = methodeInfo.MakeGenericMethod(
-#if !NET10_0
-                    (Type)enumerator.Current);
-#else
-                    enumerator.Current);
-#endif
-
+                var genericMethodInfo = methodeInfo.MakeGenericMethod(enumerator.Current);
                 services = (IServiceCollection)genericMethodInfo.Invoke(null, [services])!;
             } while (enumerator.MoveNext());
         }
