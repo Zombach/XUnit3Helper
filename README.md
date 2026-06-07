@@ -11,7 +11,7 @@ Key features
 - Attribute `CustomAutoDataAttribute` — ready-made configuration for `AutoFixture` + `AutoMoq` (including `ConfigureMembers` and recursion behavior).
 - Extension `MockExtension.AddMocks` — bulk registration of `Moq` mocks into `IServiceCollection`.
 - Helper generator `GenerateTestDataExtension` and model `TestData` — support for deserializing JSON into parameter sets up to 15 arguments.
-- Supported targets: `net8.0`, `net9.0`, `net10.0`.
+- Supported targets: `net10.0`, `net11.0`.
 
 ## Usage
 1) `JsonFileDataAttribute`
