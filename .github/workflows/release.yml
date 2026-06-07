@@ -94,7 +94,6 @@ jobs:
           else
             echo "::error::Project version must be greater than latest tag"
             echo "is_valid=false" >> $GITHUB_OUTPUT
-            exit 1
           fi
 
   # 4. Добавление тега с версией на текущий релизный комит
