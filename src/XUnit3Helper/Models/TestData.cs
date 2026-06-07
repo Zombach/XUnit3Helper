@@ -98,18 +98,24 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP15? P15 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6, P7, P8, P9, P10,
-        P11, P12, P13, P14, P15
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6, P7, P8, P9, P10,
+            P11, P12, P13, P14, P15
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?, TP7?, TP8?, TP9?, TP10?,
         TP11?, TP12?, TP13?, TP14?, TP15?>(P1, P2, P3, P4, P5,
         P6, P7, P8, P9, P10,
         P11, P12, P13, P14, P15);
+    }
 }
 
 /// <summary>
@@ -204,18 +210,24 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP14? P14 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6, P7, P8, P9, P10,
-        P11, P12, P13, P14
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6, P7, P8, P9, P10,
+            P11, P12, P13, P14
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?, TP7?, TP8?, TP9?, TP10?,
         TP11?, TP12?, TP13?, TP14?>(P1, P2, P3, P4, P5,
         P6, P7, P8, P9, P10,
         P11, P12, P13, P14);
+    }
 }
 
 /// <summary>
@@ -304,18 +316,24 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP13? P13 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6, P7, P8, P9, P10,
-        P11, P12, P13
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6, P7, P8, P9, P10,
+            P11, P12, P13
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?, TP7?, TP8?, TP9?, TP10?,
         TP11?, TP12?, TP13?>(P1, P2, P3, P4, P5,
         P6, P7, P8, P9, P10,
         P11, P12, P13);
+    }
 }
 
 /// <summary>
@@ -398,18 +416,24 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP12? P12 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6, P7, P8, P9, P10,
-        P11, P12
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6, P7, P8, P9, P10,
+            P11, P12
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?, TP7?, TP8?, TP9?, TP10?,
         TP11?, TP12?>(P1, P2, P3, P4, P5,
         P6, P7, P8, P9, P10,
         P11, P12);
+    }
 }
 
 /// <summary>
@@ -486,18 +510,24 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP11? P11 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6, P7, P8, P9, P10,
-        P11
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6, P7, P8, P9, P10,
+            P11
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?, TP7?, TP8?, TP9?, TP10?,
         TP11?>(P1, P2, P3, P4, P5,
         P6, P7, P8, P9, P10,
         P11);
+    }
 }
 /// <summary>
 /// 
@@ -566,15 +596,21 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP10? P10 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6, P7, P8, P9, P10
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6, P7, P8, P9, P10
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?, TP7?, TP8?, TP9?, TP10?>(P1, P2, P3, P4, P5,
         P6, P7, P8, P9, P10);
+    }
 }
 
 /// <summary>
@@ -638,15 +674,21 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP9? P9 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6, P7, P8, P9
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6, P7, P8, P9
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?, TP7?, TP8?, TP9?>(P1, P2, P3, P4, P5,
         P6, P7, P8, P9);
+    }
 }
 
 /// <summary>
@@ -704,15 +746,21 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP8? P8 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6, P7, P8
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6, P7, P8
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?, TP7?, TP8?>(P1, P2, P3, P4, P5,
         P6, P7, P8);
+    }
 }
 
 /// <summary>
@@ -764,15 +812,21 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP7? P7 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6, P7
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6, P7
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?, TP7?>(P1, P2, P3, P4, P5,
         P6, P7);
+    }
 }
 
 /// <summary>
@@ -818,15 +872,21 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5,
     /// </summary>
     public TP6? P6 { get; init; }
 
-    public override object?[] GetObjects() =>
-    [
-        P1, P2, P3, P4, P5,
-        P6
-    ];
+    public override object?[] GetObjects()
+    {
+        return
+        [
+            P1, P2, P3, P4, P5,
+            P6
+        ];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?,
         TP6?>(P1, P2, P3, P4, P5,
         P6);
+    }
 }
 
 /// <summary>
@@ -865,9 +925,15 @@ public sealed class TestData<TP1, TP2, TP3, TP4, TP5>
     /// </summary>
     public TP5? P5 { get; init; }
 
-    public override object?[] GetObjects() => [P1, P2, P3, P4, P5];
+    public override object?[] GetObjects()
+    {
+        return [P1, P2, P3, P4, P5];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?>(P1, P2, P3, P4, P5);
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?, TP5?>(P1, P2, P3, P4, P5);
+    }
 }
 
 /// <summary>
@@ -900,9 +966,15 @@ public sealed class TestData<TP1, TP2, TP3, TP4>
     /// </summary>
     public TP4? P4 { get; init; }
 
-    public override object?[] GetObjects() => [P1, P2, P3, P4];
+    public override object?[] GetObjects()
+    {
+        return [P1, P2, P3, P4];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?, TP4?>(P1, P2, P3, P4);
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?, TP4?>(P1, P2, P3, P4);
+    }
 }
 
 /// <summary>
@@ -929,9 +1001,15 @@ public sealed class TestData<TP1, TP2, TP3>
     /// </summary>
     public TP3? P3 { get; init; }
 
-    public override object?[] GetObjects() => [P1, P2, P3];
+    public override object?[] GetObjects()
+    {
+        return [P1, P2, P3];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?, TP3?>(P1, P2, P3);
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?, TP3?>(P1, P2, P3);
+    }
 }
 
 /// <summary>
@@ -952,9 +1030,15 @@ public sealed class TestData<TP1, TP2>
     /// </summary>
     public TP2? P2 { get; init; }
 
-    public override object?[] GetObjects() => [P1, P2];
+    public override object?[] GetObjects()
+    {
+        return [P1, P2];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?, TP2?>(P1, P2);
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?, TP2?>(P1, P2);
+    }
 }
 
 /// <summary>
@@ -969,9 +1053,15 @@ public sealed class TestData<TP1>
     /// </summary>
     public TP1? P1 { get; init; }
 
-    public override object?[] GetObjects() => [P1];
+    public override object?[] GetObjects()
+    {
+        return [P1];
+    }
 
-    public override ITheoryDataRow GetTheoryDataRow() => new TheoryDataRow<TP1?>(P1);
+    public override ITheoryDataRow GetTheoryDataRow()
+    {
+        return new TheoryDataRow<TP1?>(P1);
+    }
 }
 
 public abstract class BaseTestData

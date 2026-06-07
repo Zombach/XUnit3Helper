@@ -17,15 +17,12 @@ public sealed class CvsFileDataAttribute(
         }
 
         var lines = await File.ReadAllLinesAsync(path);
-        if (lines.Length is 0)
-        {
-            throw new ArgumentException($"File must not be empty: {path}");
-        }
-
-        return lines;
+        return lines.Length is not 0
+            ? lines
+            : throw new ArgumentException($"File must not be empty: {path}");
     }
 
-    protected override IEnumerable<ITheoryDataRow> GetTeoryDataRow(
+    protected override IEnumerable<ITheoryDataRow> GetTheoryDataRow(
         IEnumerable<string> source,
         Type[] parameterTypes)
     {

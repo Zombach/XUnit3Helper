@@ -1,8 +1,10 @@
 #nullable enable
+abstract XUnit3Helper.Impl.FileData.Common.BaseFileDataAttribute.GetSource(string! path) -> System.Threading.Tasks.ValueTask<System.Collections.Generic.IEnumerable<string!>!>
+abstract XUnit3Helper.Impl.FileData.Common.BaseFileDataAttribute.GetTheoryDataRow(System.Collections.Generic.IEnumerable<string!>! source, System.Type![]! parameterTypes) -> System.Collections.Generic.IEnumerable<Xunit.ITheoryDataRow!>!
 abstract XUnit3Helper.Models.BaseTestData.GetObjects() -> object?[]!
 abstract XUnit3Helper.Models.BaseTestData.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
-override XUnit3Helper.Impl.JsonFileDataAttribute.GetData(System.Reflection.MethodInfo! testMethod, Xunit.Sdk.DisposalTracker! disposalTracker) -> System.Threading.Tasks.ValueTask<System.Collections.Generic.IReadOnlyCollection<Xunit.ITheoryDataRow!>!>
-override XUnit3Helper.Impl.JsonFileDataAttribute.SupportsDiscoveryEnumeration() -> bool
+override XUnit3Helper.Impl.FileData.Common.BaseFileDataAttribute.GetData(System.Reflection.MethodInfo! testMethod, Xunit.Sdk.DisposalTracker! disposalTracker) -> System.Threading.Tasks.ValueTask<System.Collections.Generic.IReadOnlyCollection<Xunit.ITheoryDataRow!>!>
+override XUnit3Helper.Impl.FileData.Common.BaseFileDataAttribute.SupportsDiscoveryEnumeration() -> bool
 override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15>.GetObjects() -> object?[]!
 override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
 override XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14>.GetObjects() -> object?[]!
@@ -34,12 +36,19 @@ override XUnit3Helper.Models.TestData<TP1, TP2>.GetTheoryDataRow() -> Xunit.IThe
 override XUnit3Helper.Models.TestData<TP1>.GetObjects() -> object?[]!
 override XUnit3Helper.Models.TestData<TP1>.GetTheoryDataRow() -> Xunit.ITheoryDataRow!
 static XUnit3Helper.Extensions.MockExtension.AddMocks(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, params System.Collections.Generic.IEnumerable<System.Type!>! types) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+virtual XUnit3Helper.Impl.FileData.Common.BaseFileDataAttribute.CheckParameters(System.Type![]! parameterTypes) -> void
+virtual XUnit3Helper.Impl.FileData.Common.BaseFileDataAttribute.GetParameters(System.Reflection.MethodInfo! testMethod) -> System.Type![]!
+virtual XUnit3Helper.Impl.FileData.Common.BaseFileDataAttribute.GetPath(string! path) -> string!
 XUnit3Helper.Extensions.MockExtension
 XUnit3Helper.Impl.CustomAutoDataAttribute
 XUnit3Helper.Impl.CustomAutoDataAttribute.CustomAutoDataAttribute() -> void
 XUnit3Helper.Impl.CustomAutoDataAttribute.CustomAutoDataAttribute(System.Func<AutoFixture.IFixture!>! fixtureFactory) -> void
-XUnit3Helper.Impl.JsonFileDataAttribute
-XUnit3Helper.Impl.JsonFileDataAttribute.JsonFileDataAttribute(string! filePath, bool simpleTypeJson = false, string? sectionKey = null) -> void
+XUnit3Helper.Impl.FileData.Common.BaseFileDataAttribute
+XUnit3Helper.Impl.FileData.Common.BaseFileDataAttribute.BaseFileDataAttribute(string! filePath) -> void
+XUnit3Helper.Impl.FileData.CvsFileDataAttribute
+XUnit3Helper.Impl.FileData.CvsFileDataAttribute.CvsFileDataAttribute(string! filePath, char splitter = ',', bool headExists = false) -> void
+XUnit3Helper.Impl.FileData.JsonFileDataAttribute
+XUnit3Helper.Impl.FileData.JsonFileDataAttribute.JsonFileDataAttribute(string! filePath, bool simpleType = false, string? sectionKey = null) -> void
 XUnit3Helper.Models.BaseTestData
 XUnit3Helper.Models.BaseTestData.BaseTestData() -> void
 XUnit3Helper.Models.TestData<TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15>

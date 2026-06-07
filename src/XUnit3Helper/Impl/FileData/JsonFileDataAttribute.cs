@@ -42,7 +42,7 @@ public sealed class JsonFileDataAttribute(
         return [fileData];
     }
 
-    protected override IEnumerable<ITheoryDataRow> GetTeoryDataRow(
+    protected override IEnumerable<ITheoryDataRow> GetTheoryDataRow(
         IEnumerable<string> source,
         Type[] parameterTypes)
     {

@@ -11,18 +11,18 @@ public sealed class CvsFileDataAttributeTests
         switch (index)
         {
             case 0:
-            {
-                Assert.Equal(1, first);
-                Assert.Equal("2", second);
-                break;
-            }
+                {
+                    Assert.Equal(1, first);
+                    Assert.Equal("2", second);
+                    break;
+                }
 
             case 1:
-            {
-                Assert.Equal(-100, first);
-                Assert.Equal("Text", second);
-                break;
-            }
+                {
+                    Assert.Equal(-100, first);
+                    Assert.Equal("Text", second);
+                    break;
+                }
         }
 
         return ValueTask.CompletedTask;

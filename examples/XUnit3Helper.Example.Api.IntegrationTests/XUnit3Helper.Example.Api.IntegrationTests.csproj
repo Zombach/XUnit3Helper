@@ -2,11 +2,10 @@
 
   <PropertyGroup>
     <RootNamespace>XUnit3Helper.Example.Api.IntegrationTests</RootNamespace>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <OutputType>Exe</OutputType>
-    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,11 +19,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="xunit.v3" />
-    <PackageReference Include="XUnit3Helper.Integration" />
+    <!--<PackageReference Include="XUnit3Helper.Integration" />-->
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" VersionOverride="10.0.7" />
     <PackageReference Include="xunit.runner.visualstudio">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -42,6 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\XUnit3Helper.Integration\XUnit3Helper.Integration.csproj" />
     <ProjectReference Include="..\XUnit3Helper.Example.Api\XUnit3Helper.Example.Api.csproj" />
   </ItemGroup>
 

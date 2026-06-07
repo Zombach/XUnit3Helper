@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <OutputType>Exe</OutputType>
     <RootNamespace>XUnit3Helper.Integrations.Tests</RootNamespace>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +30,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\XUnit3Helper.Integration\XUnit3Helper.Integration.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="assets\appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\appsettings.test.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
