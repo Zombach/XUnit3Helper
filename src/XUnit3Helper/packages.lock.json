@@ -1,0 +1,223 @@
+{
+  "version": 2,
+  "dependencies": {
+    "net10.0": {
+      "AutoFixture.AutoMoq": {
+        "type": "Direct",
+        "requested": "[5.0.0-preview0012, )",
+        "resolved": "5.0.0-preview0012",
+        "contentHash": "OnGT9OzsUZMxft4Ly8XgLHinwU5b6QzISuJWTqk0OlhdOtKhf880wF2OBFAWRIaZyB7WcoWdo+GE3JdYBc2wGw==",
+        "dependencies": {
+          "AutoFixture": "5.0.0-preview0012",
+          "Moq": "[4.7.49, 5.0.0)"
+        }
+      },
+      "AutoFixture.Xunit3": {
+        "type": "Direct",
+        "requested": "[5.0.0-preview0012, )",
+        "resolved": "5.0.0-preview0012",
+        "contentHash": "8YRv0PaWibR9ZztJYqq+a+G+7O5+1Y0IqrOplMAsFEXU2QCc9YPwFb/F5E2gfKkapSkfikZKjujCTryFN17UXQ==",
+        "dependencies": {
+          "AutoFixture": "5.0.0-preview0012",
+          "xunit.v3.extensibility.core": "1.0.0"
+        }
+      },
+      "Microsoft.CodeAnalysis.PublicApiAnalyzers": {
+        "type": "Direct",
+        "requested": "[5.0.0-1.25277.114, )",
+        "resolved": "5.0.0-1.25277.114",
+        "contentHash": "jhR84dGvszupV7ccc8BE1HJdBt49jHaZcBgwLBmwsJ4Ci5bRBrX1Te7TgrRUsWaAICDNZzWT5sEiqXHdA4pfjg=="
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions": {
+        "type": "Direct",
+        "requested": "[11.0.0-preview.4.26230.115, )",
+        "resolved": "11.0.0-preview.4.26230.115",
+        "contentHash": "8lCRTWtFbIM5DTZ5JaPJDbNNEUsPGDq8TteHzs5yIzZqTa15vNPacJFKA+Li1FRtvW/A96nmf1rIEJcxiuDRBg=="
+      },
+      "xunit.analyzers": {
+        "type": "Direct",
+        "requested": "[2.0.0-pre.56, )",
+        "resolved": "2.0.0-pre.56",
+        "contentHash": "kIT2Wy9E7RUNMJlFYG/o50sLqHNuFX/fF986T2r/zMC3W7p2S84ikCU9bexX9KpPlMV3/sCvMVQ49V+XAJ+x+g=="
+      },
+      "xunit.v3.extensibility.core": {
+        "type": "Direct",
+        "requested": "[4.0.0-pre.128, )",
+        "resolved": "4.0.0-pre.128",
+        "contentHash": "lmLr9oJl1MOXA5VKf8SoBqM2V3FAEgBwnjBVPxuF604Cr/y/6Ql8S0cepdSAVnCHfmZM7gvp26HYK5/HY+84xQ==",
+        "dependencies": {
+          "xunit.v3.common": "[4.0.0-pre.128]"
+        }
+      },
+      "AutoFixture": {
+        "type": "Transitive",
+        "resolved": "5.0.0-preview0012",
+        "contentHash": "VVvNRW2rpZOXMg7+YfIBObhC26ScD/vIcV0MVd8u32dSndzlGjcsX1clus+MDpCbkHf4fJ5aULWJ6y7ueu7Ijg==",
+        "dependencies": {
+          "Fare": "[2.2.1, 3.0.0)",
+          "System.ComponentModel.Annotations": "4.4.0"
+        }
+      },
+      "Castle.Core": {
+        "type": "Transitive",
+        "resolved": "4.1.0",
+        "contentHash": "1cUDbDJtCKE+JPkcz2H8obqkjYuReE1cuINx/ewZQ6nHPO8oEQUtlu2n8kNlBPp22Mm2oC+LOBfkc8rDEVhfQA==",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        }
+      },
+      "Fare": {
+        "type": "Transitive",
+        "resolved": "2.2.1",
+        "contentHash": "21XZo/yuXK1k0EUhdLnjgRD4n0HQYmPFchV6uaORcRc65rasZ1vdm2dmJXPBKZiIBztRRYRmmg/B76W721VWkA=="
+      },
+      "Microsoft.Bcl.AsyncInterfaces": {
+        "type": "Transitive",
+        "resolved": "6.0.0",
+        "contentHash": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg=="
+      },
+      "Microsoft.NETCore.Platforms": {
+        "type": "Transitive",
+        "resolved": "1.1.0",
+        "contentHash": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A=="
+      },
+      "NETStandard.Library": {
+        "type": "Transitive",
+        "resolved": "1.6.1",
+        "contentHash": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "System.ComponentModel.Annotations": {
+        "type": "Transitive",
+        "resolved": "4.4.0",
+        "contentHash": "29K3DQ+IGU7LBaMjTo7SI7T7X/tsMtLvz1p56LJ556Iu0Dw3pKZw5g8yCYCWMRxrOF0Hr0FU0FwW0o42y2sb3A=="
+      },
+      "xunit.v3.common": {
+        "type": "Transitive",
+        "resolved": "4.0.0-pre.128",
+        "contentHash": "KzNkDsdh7q8TS83KScCNutlWMgXxxOaJip724IGQSkkZLscjrqANHze1A8Hi+EkYIDjW0juFX8lny2OIo+/OJQ==",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0"
+        }
+      },
+      "Moq": {
+        "type": "CentralTransitive",
+        "requested": "[4.20.72, )",
+        "resolved": "4.7.49",
+        "contentHash": "D23AaGaJrmoQvERnICuTmCPmLBCbKmKHCKVwq909M8kfqSg9W4sXoFSZVDYizoUd6sBBbBHbvuYKfiWU64eUvA==",
+        "dependencies": {
+          "Castle.Core": "4.1.0",
+          "NETStandard.Library": "1.6.1"
+        }
+      }
+    },
+    "net11.0": {
+      "AutoFixture.AutoMoq": {
+        "type": "Direct",
+        "requested": "[5.0.0-preview0012, )",
+        "resolved": "5.0.0-preview0012",
+        "contentHash": "OnGT9OzsUZMxft4Ly8XgLHinwU5b6QzISuJWTqk0OlhdOtKhf880wF2OBFAWRIaZyB7WcoWdo+GE3JdYBc2wGw==",
+        "dependencies": {
+          "AutoFixture": "5.0.0-preview0012",
+          "Moq": "[4.7.49, 5.0.0)"
+        }
+      },
+      "AutoFixture.Xunit3": {
+        "type": "Direct",
+        "requested": "[5.0.0-preview0012, )",
+        "resolved": "5.0.0-preview0012",
+        "contentHash": "8YRv0PaWibR9ZztJYqq+a+G+7O5+1Y0IqrOplMAsFEXU2QCc9YPwFb/F5E2gfKkapSkfikZKjujCTryFN17UXQ==",
+        "dependencies": {
+          "AutoFixture": "5.0.0-preview0012",
+          "xunit.v3.extensibility.core": "1.0.0"
+        }
+      },
+      "Microsoft.CodeAnalysis.PublicApiAnalyzers": {
+        "type": "Direct",
+        "requested": "[5.0.0-1.25277.114, )",
+        "resolved": "5.0.0-1.25277.114",
+        "contentHash": "jhR84dGvszupV7ccc8BE1HJdBt49jHaZcBgwLBmwsJ4Ci5bRBrX1Te7TgrRUsWaAICDNZzWT5sEiqXHdA4pfjg=="
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions": {
+        "type": "Direct",
+        "requested": "[11.0.0-preview.4.26230.115, )",
+        "resolved": "11.0.0-preview.4.26230.115",
+        "contentHash": "8lCRTWtFbIM5DTZ5JaPJDbNNEUsPGDq8TteHzs5yIzZqTa15vNPacJFKA+Li1FRtvW/A96nmf1rIEJcxiuDRBg=="
+      },
+      "xunit.analyzers": {
+        "type": "Direct",
+        "requested": "[2.0.0-pre.56, )",
+        "resolved": "2.0.0-pre.56",
+        "contentHash": "kIT2Wy9E7RUNMJlFYG/o50sLqHNuFX/fF986T2r/zMC3W7p2S84ikCU9bexX9KpPlMV3/sCvMVQ49V+XAJ+x+g=="
+      },
+      "xunit.v3.extensibility.core": {
+        "type": "Direct",
+        "requested": "[4.0.0-pre.128, )",
+        "resolved": "4.0.0-pre.128",
+        "contentHash": "lmLr9oJl1MOXA5VKf8SoBqM2V3FAEgBwnjBVPxuF604Cr/y/6Ql8S0cepdSAVnCHfmZM7gvp26HYK5/HY+84xQ==",
+        "dependencies": {
+          "xunit.v3.common": "[4.0.0-pre.128]"
+        }
+      },
+      "AutoFixture": {
+        "type": "Transitive",
+        "resolved": "5.0.0-preview0012",
+        "contentHash": "VVvNRW2rpZOXMg7+YfIBObhC26ScD/vIcV0MVd8u32dSndzlGjcsX1clus+MDpCbkHf4fJ5aULWJ6y7ueu7Ijg==",
+        "dependencies": {
+          "Fare": "[2.2.1, 3.0.0)"
+        }
+      },
+      "Castle.Core": {
+        "type": "Transitive",
+        "resolved": "4.1.0",
+        "contentHash": "1cUDbDJtCKE+JPkcz2H8obqkjYuReE1cuINx/ewZQ6nHPO8oEQUtlu2n8kNlBPp22Mm2oC+LOBfkc8rDEVhfQA==",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        }
+      },
+      "Fare": {
+        "type": "Transitive",
+        "resolved": "2.2.1",
+        "contentHash": "21XZo/yuXK1k0EUhdLnjgRD4n0HQYmPFchV6uaORcRc65rasZ1vdm2dmJXPBKZiIBztRRYRmmg/B76W721VWkA=="
+      },
+      "Microsoft.Bcl.AsyncInterfaces": {
+        "type": "Transitive",
+        "resolved": "6.0.0",
+        "contentHash": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg=="
+      },
+      "Microsoft.NETCore.Platforms": {
+        "type": "Transitive",
+        "resolved": "1.1.0",
+        "contentHash": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A=="
+      },
+      "NETStandard.Library": {
+        "type": "Transitive",
+        "resolved": "1.6.1",
+        "contentHash": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "xunit.v3.common": {
+        "type": "Transitive",
+        "resolved": "4.0.0-pre.128",
+        "contentHash": "KzNkDsdh7q8TS83KScCNutlWMgXxxOaJip724IGQSkkZLscjrqANHze1A8Hi+EkYIDjW0juFX8lny2OIo+/OJQ==",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0"
+        }
+      },
+      "Moq": {
+        "type": "CentralTransitive",
+        "requested": "[4.20.72, )",
+        "resolved": "4.7.49",
+        "contentHash": "D23AaGaJrmoQvERnICuTmCPmLBCbKmKHCKVwq909M8kfqSg9W4sXoFSZVDYizoUd6sBBbBHbvuYKfiWU64eUvA==",
+        "dependencies": {
+          "Castle.Core": "4.1.0",
+          "NETStandard.Library": "1.6.1"
+        }
+      }
+    }
+  }
+}
