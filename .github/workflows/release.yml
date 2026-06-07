@@ -12,7 +12,7 @@ jobs:
   # 2. Добавление проверки прохождения тестов
   run_test:
     name: Run tests
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -33,7 +33,7 @@ jobs:
   # 3. Добавление проверки текущей версии проекта
   check_version:
     name: Check project version
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     outputs:
       # Возвращает результат проверки в переменной is_valid
       # Из других джоб на результат можно получить используя выражение needs.check_version.outputs.is_valid
@@ -97,7 +97,7 @@ jobs:
   # 4. Добавление тега с версией на текущий релизный комит
   tag_and_push:
     name: Create and push release tag
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     # Джоба ожидает выполнения указанных в условии других джоб
     needs: [run_test, check_version]
     # Создаем  тег после того, как убедились, что юнит тесты пройдены и проверка версии завершена успешно
@@ -149,7 +149,7 @@ jobs:
   # 5. Создание релиза в репозитории GitHub
   release:
     name: Create release
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     needs: tag_and_push
     if: success()
     env:
@@ -178,7 +178,7 @@ jobs:
     # Юзер френдли имя джобы, которое будет отображаться на UI
     name: Create NuGet
     # Среда исполения. Каждая джоба выполняется изолировано в своем окружении
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     # Save path to the NuGet directory in the environment variable
     needs: tag_and_push
     if: success()
@@ -222,7 +222,7 @@ jobs:
   # 1.4. Добавления джобы публикации пакета
   deploy:
     name: Deploy NuGet
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     # Перед публикацией необходим готовый артефакт.
     # Поэтому эта джоба ждет завершения выполнения джобы create_nuget
     needs: create_nuget
