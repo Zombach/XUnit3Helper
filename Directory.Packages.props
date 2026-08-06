@@ -3,8 +3,8 @@
   <ItemGroup Condition="$([MSBuild]::IsTargetFrameworkCompatible($(TargetFramework), 'net9.0'))">
   -->
   <ItemGroup>
-    <PackageVersion Include="AutoFixture.AutoMoq" Version="5.0.0-preview0012" />
-    <PackageVersion Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
+    <PackageVersion Include="AutoFixture.AutoMoq" Version="5.0.0-rc.1" />
+    <PackageVersion Include="AutoFixture.Xunit3" Version="5.0.0-rc.1" />
     <PackageVersion Include="XUnit3Helper" Version="0.0.6-alpha" />
     <PackageVersion Include="XUnit3Helper.Integration" Version="0.0.6-alpha" />
     <PackageVersion Include="XUnit3Helper.StartupModule" Version="0.0.6-alpha" />
